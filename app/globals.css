@@ -23,4 +23,104 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 3rem));
+    }
+}
+
+.animate-marquee {
+    animation: marquee 20s linear infinite;
+}
+
+/* Rotating beam cards */
+
+.beam-card {
+    position: relative;
+    isolation: isolate;
+    border-radius: 24px;
+    background: white;
+    transition: transform .4s ease;
+}
+
+.beam-card:hover {
+    transform: translateY(-8px);
+}
+
+.beam {
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    left: -100%;
+    top: -100%;
+
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        transparent 300deg,
+        rgba(14,132,123,.15) 320deg,
+        rgba(255,255,255,1) 335deg,
+        rgba(14,132,123,1) 345deg,
+        rgba(255,255,255,1) 350deg,
+        transparent 360deg
+    );
+
+    animation: beamRotate 6s linear infinite;
+}
+
+.beam-card::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    border-radius: 22px;
+    background: white;
+    z-index: 1;
+}
+
+.beam-card > .relative {
+    z-index: 2;
+}
+
+@keyframes beamRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.graph-line{
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawGraph 4s ease-in-out infinite;
+}
+
+@keyframes drawGraph{
+    0%{
+        stroke-dashoffset:500;
+    }
+
+    40%{
+        stroke-dashoffset:0;
+    }
+
+    80%{
+        stroke-dashoffset:0;
+    }
+
+    100%{
+        stroke-dashoffset:-500;
+    }
 }
