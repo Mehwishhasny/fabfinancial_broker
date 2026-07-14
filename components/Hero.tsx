@@ -11,6 +11,7 @@ import Link from "next/link";
 export default function BlueprintHero() {
 
     const [active, setActive] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
 
     const testimonials = [
         {
@@ -142,6 +143,17 @@ export default function BlueprintHero() {
         return () => ctx.revert();
     }, []);
 
+    useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  handleResize();
+
+  window.addEventListener("resize", handleResize);
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
     return (
         <>
@@ -150,7 +162,7 @@ export default function BlueprintHero() {
                 <div className="absolute -top-20 -right-20 h-92 w-92 rounded-full bg-[#0e847b]/20 blur-3xl" />
 
                 {/* LEFT */}
-                <div className="w-full md:w-1/2 text-black ml-0 md:ml-25 text-center lg:text-left flex flex-col items-center lg:items-start pt-20 lg:pt-0 mt-0 md:mt-10">
+                <div className="w-full md:w-1/2 text-black ml-0 md:ml-25 lg:ml-25 text-center lg:text-left flex flex-col items-center lg:items-start pt-20 lg:pt-0 mt-0 md:mt-10">
                     <h1
                         ref={titleRef}
                         className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight"
@@ -1013,13 +1025,9 @@ export default function BlueprintHero() {
                     duration-700
                     ease-in-out
                 "
-                style={{
-                    transform: `translateX(-${
-                        window.innerWidth >= 768
-                            ? active * 50
-                            : active * 100
-                    }%)`,
-                }}
+            style={{
+  transform: `translateX(-${isMobile ? active * 100 : active * 50}%)`,
+}}
             >
 
                 {testimonials.map((item, index) => (
