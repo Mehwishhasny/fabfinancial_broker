@@ -162,24 +162,24 @@ export default function BlueprintHero() {
                 className="min-h-screen bg-[#f8fbfb] flex flex-col lg:flex-row items-start lg:items-center justify-center px-4 md:px-6 lg:px-20 overflow-hidden relative w-full md:w-full -mb-20"
             >
 
-                <div className="absolute md:-top-20 top-5 -right-20 md:h-92 h-50 md:w-92 w-50 rounded-full bg-[#0e847b]/20 blur-3xl" />
+                <div className="absolute md:-top-20 top-0 -right-20 md:h-92 h-50 md:w-92 w-50 rounded-full bg-[#0e847b]/20 blur-3xl" />
 
                 {/* LEFT */}
                 <div className="
-w-full
-lg:w-1/2
-px-5
-lg:px-0
-lg:ml-20
-flex
-flex-col
-items-center
-lg:items-start
-text-center
-lg:text-left
-pt-20
-lg:pt-0
-">
+                        w-full
+                        lg:w-1/2
+                        px-5
+                        lg:px-0
+                        lg:ml-20
+                        flex
+                        flex-col
+                        items-center
+                        lg:items-start
+                        text-center
+                        lg:text-left
+                        pt-15
+                        lg:pt-0
+                        ">
                     <h1
                         ref={titleRef}
                         className="text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-black"
@@ -837,24 +837,23 @@ lg:pt-0
 
 
             {/* Mortgage Calculator */}
-            <section className="my-14 lg:my-20 px-2 lg:px-6">
+            <section className="my-6 lg:my-15 px-4 lg:px-6">
                 <div
                     className="
-            relative
-            overflow-hidden
-            mx-0
-            md:mx-auto
-            md:w-6xl
-            md:max-w-5xl
-            w-[300px]
-            rounded-[30px]
-            lg:rounded-[40px]
-            bg-[#0e847b]
-            p-4
-            md:p-14
-            md:text-center
-            text-white
-        "
+        relative
+        overflow-hidden
+        mx-auto
+        w-full
+        max-w-[350px]
+        md:max-w-5xl
+        rounded-[30px]
+        lg:rounded-[40px]
+        bg-[#0e847b]
+        p-4
+        md:p-14
+        md:text-center
+        text-white
+    "
                 >
                     {/* Animated Diamonds */}
 
@@ -1059,9 +1058,9 @@ lg:pt-0
             </section>
 
             {/* Insights */}
-            <section className="bg-gray-50 py-10 md:py-20 px-3 md:px-6">
+           <section className="bg-gray-50 py-10 md:py-20 px-4">
 
-                <div className="mx-0 md:mx-auto md:max-w-4xl max-w-[300px] px-2">
+    <div className="mx-auto w-full max-w-[350px] sm:max-w-md md:max-w-4xl">
 
                     {/* Heading */}
                     <div className="text-center">
@@ -1077,7 +1076,7 @@ lg:pt-0
                     </div>
 
                     {/* Cards */}
-                    <div className="mt-10 md:mt-14 overflow-hidden">
+                    <div className="mt-10 md:mt-14 overflow-hidden w-full">
 
                         <div
                             className="
@@ -1098,7 +1097,8 @@ lg:pt-0
                                 <div
                                     key={index}
                                     className="
-                            min-w-full
+                            min-w-full 
+                            w-full
                             md:min-w-[calc(50%-12px)]
                             rounded-3xl
                             bg-white
