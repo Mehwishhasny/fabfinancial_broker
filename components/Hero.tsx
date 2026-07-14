@@ -159,13 +159,36 @@ export default function BlueprintHero() {
     return (
         <>
             <section
-                className="min-h-screen bg-[#f8fbfb] flex flex-col lg:flex-row items-start lg:items-center justify-center px-4 md:px-6 lg:px-20 overflow-hidden relative w-full md:w-full -mb-20"
+                className="min-h-screen flex flex-col lg:flex-row items-start lg:items-center justify-center px-4 md:px-6 lg:px-20 overflow-hidden relative w-full -mb-20"
             >
+                {/* Background Video */}
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="
+                        absolute
+                        inset-0
+                        h-full
+                        w-full
+                        object-cover
+                        object-center
+                        scale-110
+                        
+                    "
+                >
+                    <source src="/videos/herobg2.mp4" type="video/mp4" />
+                </video>
+                {/* Overlay */}
+                <div className="absolute inset-1 bg-[#f8fbfb]/30" />
 
                 <div className="absolute md:-top-20 top-0 -right-20 md:h-92 h-50 md:w-92 w-50 rounded-full bg-[#0e847b]/20 blur-3xl" />
 
                 {/* LEFT */}
                 <div className="
+                relative 
+                z-10 
                         w-full
                         lg:w-1/2
                         px-5
@@ -189,7 +212,7 @@ export default function BlueprintHero() {
                         To Your Dream Home
                     </h1>
 
-                    <p className="mt-4 md:mt-6 md:max-w-md max-w-[250px] text-sm sm:text-lg lg:text-xl text-gray-800">
+                    <p className="mt-4 md:mt-6 md:max-w-md max-w-[250px] text-sm sm:text-lg lg:text-xl text-gray-900">
                         Smart mortgage solutions designed around your future.
                     </p>
 
@@ -204,7 +227,7 @@ export default function BlueprintHero() {
                 </div>
 
                 {/* RIGHT */}
-                <div className="relative mt-2 lg:mt-0 w-[350px] lg:w-1/2 flex justify-center items-center">
+                <div className="relative z-10 mt-2 lg:mt-0 w-[350px] lg:w-1/2 flex justify-center items-center">
                     <svg
                         ref={houseRef}
                         viewBox="0 0 500 500"
@@ -282,7 +305,7 @@ export default function BlueprintHero() {
                             items-center
                             opacity-10
                             pointer-events-none
-                            md:opacity-20
+                            md:opacity-30
                         "
                     >
                         <svg
@@ -335,7 +358,7 @@ export default function BlueprintHero() {
         lg:w-92
         rounded-full
         bg-white/10
-        blur-2xl
+        blur-xl
 "
                     />
                 </div>
@@ -532,7 +555,7 @@ export default function BlueprintHero() {
                                 image: "/images/solution.jpg",
                             },
                             {
-                                title: "Home Loans",
+                                title: "Mortgages",
                                 desc: "Access competitive mortgage options from trusted banking partners.",
                                 image: "/images/mortgage.jpg",
                             },
@@ -705,7 +728,7 @@ export default function BlueprintHero() {
                                     🔑
                                 </div>
 
-                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">
                                     Mortgages
                                 </h3>
 
@@ -732,7 +755,7 @@ export default function BlueprintHero() {
                                     🏢
                                 </div>
 
-                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">
                                     Business Finance
                                 </h3>
 
@@ -759,7 +782,7 @@ export default function BlueprintHero() {
                                     ✨
                                 </div>
 
-                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">
                                     Golden Visa
                                 </h3>
 
@@ -786,7 +809,7 @@ export default function BlueprintHero() {
                                     🧭
                                 </div>
 
-                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">
                                     Financial Advisory
                                 </h3>
 
@@ -813,7 +836,7 @@ export default function BlueprintHero() {
                                     🤝
                                 </div>
 
-                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">
                                     Resident's Support
                                 </h3>
 
@@ -1058,9 +1081,9 @@ export default function BlueprintHero() {
             </section>
 
             {/* Insights */}
-           <section className="bg-gray-50 py-10 md:py-20 px-4">
+            <section className="bg-gray-50 py-10 md:py-20 px-4">
 
-    <div className="mx-auto w-full max-w-[350px] sm:max-w-md md:max-w-4xl">
+                <div className="mx-auto w-full max-w-[350px] sm:max-w-md md:max-w-4xl">
 
                     {/* Heading */}
                     <div className="text-center">

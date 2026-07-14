@@ -37,17 +37,17 @@ export default function Sidebar() {
     items-center
 
     px-4
-    gap-6
+    gap-4
 
     md:h-screen
     md:w-40
     md:flex-col
-    md:gap-6
+    md:gap-4
     md:py-6
   "
         >
             {/* Logo */}
-            <div className="flex items-center md:justify-center md:px-2 md:py-6">
+            <div className="flex items-center md:justify-center md:px-2 md:py-4">
                 <Image
                     src="/images/logo.jpeg"
                     alt="FAB"
@@ -109,7 +109,7 @@ export default function Sidebar() {
                                 hover:text-white
                             "
                         >
-                            <Icon className="w-4 h-4 md:w-6 md:h-6" />
+                            <Icon className="w-4 h-4 md:w-6 md:h-6 text-white opacity-60 blur-5" />
 
                             {/* Tooltip (Desktop Only) */}
                             <span
