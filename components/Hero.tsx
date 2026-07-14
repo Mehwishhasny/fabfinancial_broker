@@ -135,12 +135,6 @@ export default function BlueprintHero() {
                 filter:
                     "drop-shadow(0 0 4px rgba(0,0,0,.15)) drop-shadow(0 0 10px rgba(0,0,0,.25))",
 
-
-
-
-
-
-
                 repeat: -1,
                 yoyo: true,
                 duration: 2,
@@ -165,13 +159,27 @@ export default function BlueprintHero() {
     return (
         <>
             <section
-                className="min-h-screen bg-[#f8fbfb] flex flex-col lg:flex-row items-start lg:items-center justify-center px-4 md:px-6 lg:px-20 overflow-hidden relative"
+                className="min-h-screen bg-[#f8fbfb] flex flex-col lg:flex-row items-start lg:items-center justify-center px-4 md:px-6 lg:px-20 overflow-hidden relative w-full md:w-full -mb-20"
             >
 
                 <div className="absolute md:-top-20 top-5 -right-20 md:h-92 h-50 md:w-92 w-50 rounded-full bg-[#0e847b]/20 blur-3xl" />
 
                 {/* LEFT */}
-                <div className="w-full lg:w-1/2 px-6 lg:px-0 lg:ml-20 text-left flex flex-col items-start pt-20 lg:pt-0">
+                <div className="
+w-full
+lg:w-1/2
+px-5
+lg:px-0
+lg:ml-20
+flex
+flex-col
+items-center
+lg:items-start
+text-center
+lg:text-left
+pt-20
+lg:pt-0
+">
                     <h1
                         ref={titleRef}
                         className="text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-black"
@@ -196,12 +204,12 @@ export default function BlueprintHero() {
                 </div>
 
                 {/* RIGHT */}
-                <div className="relative mt-2 lg:mt-0 w-[300px] lg:w-1/2 flex justify-center items-center">
+                <div className="relative mt-2 lg:mt-0 w-[350px] lg:w-1/2 flex justify-center items-center">
                     <svg
                         ref={houseRef}
                         viewBox="0 0 500 500"
                         fill="none"
-                        className="relative z-10 mx-auto w-[300px] h-[300px] md:h-auto sm:w-[300px] md:w-[380px] lg:w-full max-w-[520px]"
+                        className="relative z-10 mx-auto w-[350px] h-[300px] md:h-auto sm:w-[350px] md:w-[380px] lg:w-full max-w-[520px]"
                     >
 
                         <defs>
@@ -343,7 +351,7 @@ export default function BlueprintHero() {
                 <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-[#0e847b]/10 blur-3xl" />
                 <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-yellow-300/10 blur-3xl" />
 
-                <div className="relative z-10 md:mx-auto mx-5 flex max-w-[300px] md:max-w-7xl flex-col lg:flex-row items-center gap-16 lg:gap-20">
+                <div className="relative z-10 md:mx-auto mx-5 -mt-16 md:mt-2 flex max-w-[350px] md:max-w-7xl flex-col lg:flex-row items-center gap-20 lg:gap-20">
 
                     {/* LEFT IMAGE */}
                     <div className="order-2 lg:order-1 relative w-full lg:w-1/2 max-w-md mx-auto lg:max-w-none lg:ml-24">
@@ -375,7 +383,7 @@ export default function BlueprintHero() {
                     </div>
 
                     {/* RIGHT CONTENT */}
-                    <div className="order-1 lg:order-2 w-full lg:w-1/2 text-center lg:text-left">
+                    <div className="order-1 lg:order-2 w-full lg:w-1/2 text-center md:text-left ml-0 lg:ml-10 lg:text-left">
 
                         <p className="uppercase tracking-[0.3em] lg:tracking-[0.5em] text-[#0e847b] font-bold mb-4 underline underline-offset-8">
                             About <b>FAB</b>
@@ -385,13 +393,22 @@ export default function BlueprintHero() {
                             Trusted Financial Advisors in UAE
                         </h2>
 
-                        <p className="mt-6 lg:mt-8 text-base lg:text-lg leading-8 lg:leading-9 text-gray-600 max-w-[280px]">
+                        <p className="
+                            mt-6
+                            text-base
+                            lg:text-lg
+                            leading-8
+                            text-gray-600
+                            max-w-md
+                            mx-auto
+                            lg:mx-0
+                            ">
                             At <strong>Financial Broker (FAB)</strong>, we simplify complex
                             financial decisions with expert guidance, strategic planning,
                             and access to the UAE's leading banks and lenders.
                         </p>
 
-                        <p className="mt-5 lg:mt-6 text-base lg:text-lg leading-8 lg:leading-9 text-gray-600 max-w-[280px]">
+                        <p className="mt-5 lg:mt-6 text-base lg:text-lg leading-8 lg:leading-9 text-gray-600 max-w-[280px] md:max-w-full">
                             Whether you're purchasing your first home, expanding your
                             business, or planning long-term investments, we provide
                             transparent advice tailored to your goals.
@@ -467,7 +484,7 @@ export default function BlueprintHero() {
                 <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-[#0e847b]/10 blur-[120px]" />
                 <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-yellow-300/10 blur-[120px]" />
 
-                <div className="relative md:mx-auto mx-0 max-w-[300px] md:max-w-5xl px-2 lg:px-8">
+                <div className="relative md:mx-auto mx-0 max-w-[350px] md:max-w-5xl px-2 lg:px-8">
 
                     {/* Heading */}
                     <div className="text-center">
@@ -525,7 +542,7 @@ export default function BlueprintHero() {
                                 image: "/images/goldenvisa.webp",
                             },
                             {
-                                title: "Ongoing Support",
+                                title: "End-to-end Support",
                                 desc: "We're here even after approval to support your financial future.",
                                 image: "/images/support.jpg",
                             },
@@ -541,7 +558,7 @@ export default function BlueprintHero() {
                                         <Image
                                             src={item.image}
                                             alt={item.title}
-                                            width={500}
+                                            width={600}
                                             height={300}
                                             className="w-full h-44 object-cover"
                                         />
@@ -592,10 +609,10 @@ export default function BlueprintHero() {
                                         }
                                         
                                     `}
-                                 >
-                        
+                                >
+
                                     <div
-                                    className="
+                                        className="
                                 rounded-3xl
                                 bg-white
                                 p-5
@@ -605,20 +622,20 @@ export default function BlueprintHero() {
                                 hover:-translate-y-2
                                 hover:shadow-2xl
                             "
-                                >
-                                    <h3 className="text-xl lg:text-2xl font-bold text-[#0e847b]">
-                                        {item.title}
-                                    </h3>
+                                    >
+                                        <h3 className="text-xl lg:text-2xl font-bold text-[#0e847b]">
+                                            {item.title}
+                                        </h3>
 
-                                    <p className="mt-3 lg:mt-4 text-sm lg:text-base leading-7 lg:leading-8 text-gray-600">
-                                        {item.desc}
-                                    </p>
+                                        <p className="mt-3 lg:mt-4 text-sm lg:text-base leading-7 lg:leading-8 text-gray-600">
+                                            {item.desc}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
 
-                                {/* Timeline Dot */ }
-                            < div
-                             className="
+                                {/* Timeline Dot */}
+                                < div
+                                    className="
                                 absolute
                                 left-10
                                 lg:left-1/2
@@ -636,165 +653,193 @@ export default function BlueprintHero() {
                                 bg-[#0e847b]
                                 shadow-[0_0_20px_rgba(14,132,123,.6)]
                                 "
-                                        >
-</div>
-                </div>
+                                >
+                                </div>
+                            </div>
 
                         ))}
 
-            </div>
+                    </div>
 
-        </div >
+                </div >
             </section >
 
-        <section
-            id="services"
-            className="relative overflow-hidden bg-white py-3 md:py-16 lg:py-20"
-        >
-            {/* Background Blur */}
-            <div className="absolute -top-20 left-0 h-80 w-80 rounded-full bg-[#0e847b]/10 blur-[120px]" />
-            <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-yellow-300/10 blur-[120px]" />
+            <section
+                id="services"
+                className="relative overflow-hidden bg-white py-3 md:py-16 lg:py-20"
+            >
+                {/* Background Blur */}
+                <div className="absolute -top-20 left-0 h-80 w-80 rounded-full bg-[#0e847b]/10 blur-[120px]" />
+                <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-yellow-300/10 blur-[120px]" />
 
-            <div className="relative md:mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
+                <div className="relative md:mx-auto w-full max-w-6xl px-5 -mt-2 md:mt-auto sm:px-6 lg:px-8">
 
-                {/* Heading */}
-                <div className="md:text-center">
-                    <p className="uppercase tracking-[0.25em] md:tracking-[0.4em] text-[#0e847b] font-semibold text-sm md:text-base">
-                        Our Services
-                    </p>
+                    {/* Heading */}
+                    <div className="md:text-center">
+                        <p className="uppercase tracking-[0.25em] md:tracking-[0.4em] text-[#0e847b] font-semibold text-sm md:text-base">
+                            Our Services
+                        </p>
 
-                    <h2 className="mt-4 text-2xl sm:text-3xl md:text-5xl font-bold leading-tight text-gray-900 w-[240px] md:w-full">
-                        Financial Solutions Designed Around You
-                    </h2>
+                        <h2 className="mt-4 text-2xl sm:text-3xl md:text-5xl font-bold leading-tight text-gray-900 w-[240px] md:w-full">
+                            Financial Solutions Designed Around You
+                        </h2>
 
                         <p className="md:mx-auto mt-5 max-w-2xl text-sm sm:text-base md:text-lg leading-7 md:leading-8 w-[260px] md:w-full text-gray-600">
-                        Whether you're buying your dream home, growing your business,
-                        or planning your future, our experts provide tailored financial
-                        solutions with complete transparency.
-                    </p>
-                </div>
-
-                {/* Cards */}
-                <div className="mt-6 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 md:w-full w-1/2 mx-0 md:mx-10">
-
-                    {/* Card 1 */}
-                    <div className="relative overflow-hidden rounded-2xl md:rounded-3xl p-[2px] w-[280px] md:w-auto beam-card">
-
-                        <div className="beam absolute inset-0"></div>
-
-                        <div className="relative z-10 rounded-[20px] bg-white p-5 sm:p-6 md:p-8 transition duration-500 hover:-translate-y-2 md:hover:-translate-y-3">
-
-                        <div className="mb-4 flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 items-center justify-center rounded-2xl bg-[#0e847b]/10 text-xl sm:text-2xl md:text-3xl">
-                                🏠
-                            </div>
-
-                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
-                                Home Loans
-                            </h3>
-
-                            <p className="mt-3 text-sm md:text-base leading-6 md:leading-8">
-                                Competitive mortgage solutions from leading UAE banks with
-                                expert guidance through every step.
-                            </p>
-
-                            <button className="mt-5 md:mt-7 inline-block font-semibold text-[#0e847b] text-sm md:text-base hover:translate-x-1 transition">
-                                Learn More →
-                            </button>
-
-                        </div>
+                            Whether you're buying your dream home, growing your business,
+                            or planning your future, our experts provide tailored financial
+                            solutions with complete transparency.
+                        </p>
                     </div>
 
-                    {/* Card 2 */}
-                    <div className="relative overflow-hidden rounded-2xl md:rounded-3xl w-[280px] md:w-auto p-[2px] beam-card">
+                    {/* Cards */}
+                    <div className="mt-6 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 md:w-full w-1/2 mx-0 md:mx-10">
 
-                        <div className="beam absolute inset-0"></div>
+                        {/* Card 1 */}
+                        <div className="relative overflow-hidden rounded-2xl md:rounded-3xl p-[2px] w-[280px] md:w-auto beam-card">
 
-                       <div className="relative z-10 rounded-[20px] bg-white p-5 sm:p-6 md:p-8 transition duration-500 hover:-translate-y-2 md:hover:-translate-y-3">
+                            <div className="beam absolute inset-0"></div>
 
-                            <div className="mb-4 flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 items-center justify-center rounded-2xl bg-[#0e847b]/10 text-xl sm:text-2xl md:text-3xl">
-                                💼
+                            <div className="relative z-10 rounded-[20px] bg-white p-5 sm:p-6 md:p-8 transition duration-500 hover:-translate-y-2 md:hover:-translate-y-3">
+
+                                <div className="mb-4 flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 items-center justify-center rounded-2xl bg-[#0e847b]/10 text-xl sm:text-2xl md:text-3xl">
+                                    🔑
+                                </div>
+
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
+                                    Mortgages
+                                </h3>
+
+                                <p className="mt-3 text-sm md:text-base leading-6 md:leading-8 text-black">
+                                    Competitive mortgage solutions from leading UAE banks with
+                                    expert guidance through every step.
+                                </p>
+
+                                <button className="mt-5 md:mt-7 inline-block font-semibold text-[#0e847b] text-sm md:text-base hover:translate-x-1 transition">
+                                    Learn More →
+                                </button>
+
                             </div>
-
-                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
-                                Business Finance
-                            </h3>
-
-                            <p className="mt-3 text-sm md:text-base leading-6 md:leading-8">
-                                Working capital, equipment finance and customized lending
-                                solutions to accelerate business growth.
-                            </p>
-
-                            <button className="mt-5 md:mt-7 inline-block font-semibold text-[#0e847b] text-sm md:text-base hover:translate-x-1 transition">
-                                Learn More →
-                            </button>
-
                         </div>
-                    </div>
 
-                    {/* Card 3 */}
-                    <div className="relative overflow-hidden rounded-2xl md:rounded-3xl w-[280px] md:w-auto p-[2px] beam-card">
-
-                        <div className="beam absolute inset-0"></div>
-
-                        <div className="relative z-10 rounded-[20px] bg-white p-5 sm:p-6 md:p-8 transition duration-500 hover:-translate-y-2 md:hover:-translate-y-3">
-
-                            <div className="mb-4 flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 items-center justify-center rounded-2xl bg-[#0e847b]/10 text-xl sm:text-2xl md:text-3xl">
-                                ✨
-                            </div>
-
-                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
-                                Golden Visa
-                            </h3>
-
-                            <p className="mt-3 text-sm md:text-base leading-6 md:leading-8">
-                                End-to-end assistance with UAE Golden Visa eligibility,
-                                investment planning and documentation.
-                            </p>
-
-                            <button className="mt-5 md:mt-7 inline-block font-semibold text-[#0e847b] text-sm md:text-base hover:translate-x-1 transition">
-                                Learn More →
-                            </button>
-
-                        </div>
-                    </div>
-
-                    {/* Card 4 */}
+                        {/* Card 2 */}
                         <div className="relative overflow-hidden rounded-2xl md:rounded-3xl w-[280px] md:w-auto p-[2px] beam-card">
 
-                        <div className="beam absolute inset-0"></div>
+                            <div className="beam absolute inset-0"></div>
 
-                        <div className="relative z-10 rounded-[20px] bg-white p-5 sm:p-6 md:p-8 transition duration-500 hover:-translate-y-2 md:hover:-translate-y-3">
+                            <div className="relative z-10 rounded-[20px] bg-white p-5 sm:p-6 md:p-8 transition duration-500 hover:-translate-y-2 md:hover:-translate-y-3">
 
-                            <div className="mb-4 flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 items-center justify-center rounded-2xl bg-[#0e847b]/10 text-xl sm:text-2xl md:text-3xl">
-                                📈
+                                <div className="mb-4 flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 items-center justify-center rounded-2xl bg-[#0e847b]/10 text-xl sm:text-2xl md:text-3xl">
+                                    🏢
+                                </div>
+
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
+                                    Business Finance
+                                </h3>
+
+                                <p className="mt-3 text-sm md:text-base leading-6 md:leading-8 text-black">
+                                    Working capital, equipment finance and customized lending
+                                    solutions to accelerate business growth.
+                                </p>
+
+                                <button className="mt-5 md:mt-7 inline-block font-semibold text-[#0e847b] text-sm md:text-base hover:translate-x-1 transition">
+                                    Learn More →
+                                </button>
+
                             </div>
-
-                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
-                                Financial Advisory
-                            </h3>
-
-                            <p className="mt-3 text-sm md:text-base leading-6 md:leading-8">
-                                Personalized financial guidance to help you make confident
-                                borrowing and investment decisions.
-                            </p>
-
-                            <button className="mt-5 md:mt-7 inline-block font-semibold text-[#0e847b] text-sm md:text-base hover:translate-x-1 transition">
-                                Learn More →
-                            </button>
-
                         </div>
+
+                        {/* Card 3 */}
+                        <div className="relative overflow-hidden rounded-2xl md:rounded-3xl w-[280px] md:w-auto p-[2px] beam-card">
+
+                            <div className="beam absolute inset-0"></div>
+
+                            <div className="relative z-10 rounded-[20px] bg-white p-5 sm:p-6 md:p-8 transition duration-500 hover:-translate-y-2 md:hover:-translate-y-3">
+
+                                <div className="mb-4 flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 items-center justify-center rounded-2xl bg-[#0e847b]/10 text-xl sm:text-2xl md:text-3xl">
+                                    ✨
+                                </div>
+
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
+                                    Golden Visa
+                                </h3>
+
+                                <p className="mt-3 text-sm md:text-base leading-6 md:leading-8 text-black">
+                                    End-to-end assistance with UAE Golden Visa eligibility,
+                                    investment planning and documentation.
+                                </p>
+
+                                <button className="mt-5 md:mt-7 inline-block font-semibold text-[#0e847b] text-sm md:text-base hover:translate-x-1 transition">
+                                    Learn More →
+                                </button>
+
+                            </div>
+                        </div>
+
+                        {/* Card 4 */}
+                        <div className="relative overflow-hidden rounded-2xl md:rounded-3xl w-[280px] md:w-auto p-[2px] beam-card">
+
+                            <div className="beam absolute inset-0"></div>
+
+                            <div className="relative z-10 rounded-[20px] bg-white p-5 sm:p-6 md:p-8 transition duration-500 hover:-translate-y-2 md:hover:-translate-y-3">
+
+                                <div className="mb-4 flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 items-center justify-center rounded-2xl bg-[#0e847b]/10 text-xl sm:text-2xl md:text-3xl">
+                                    🧭
+                                </div>
+
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
+                                    Financial Advisory
+                                </h3>
+
+                                <p className="mt-3 text-sm md:text-base leading-6 md:leading-8 text-black">
+                                    Personalized financial guidance to help you make confident
+                                    borrowing and investment decisions.
+                                </p>
+
+                                <button className="mt-5 md:mt-7 inline-block font-semibold text-[#0e847b] text-sm md:text-base hover:translate-x-1 transition">
+                                    Learn More →
+                                </button>
+
+                            </div>
+                        </div>
+
+                        {/* Card 5 */}
+                        <div className="relative overflow-hidden rounded-2xl md:rounded-3xl w-[280px] md:w-auto p-[2px] beam-card">
+
+                            <div className="beam absolute inset-0"></div>
+
+                            <div className="relative z-10 rounded-[20px] bg-white p-5 sm:p-6 md:p-8 transition duration-500 hover:-translate-y-2 md:hover:-translate-y-3">
+
+                                <div className="mb-4 flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 items-center justify-center rounded-2xl bg-[#0e847b]/10 text-xl sm:text-2xl md:text-3xl">
+                                    🤝
+                                </div>
+
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
+                                    Resident's Support
+                                </h3>
+
+                                <p className="mt-3 text-sm md:text-base leading-6 md:leading-8 text-black">
+                                    Dedicated assistance for UAE residents with financial guidance,
+                                    documentation support and ongoing service whenever you need it.
+
+                                </p>
+
+                                <button className="mt-5 md:mt-7 inline-block font-semibold text-[#0e847b] text-sm md:text-base hover:translate-x-1 transition">
+                                    Learn More →
+                                </button>
+
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
-
-            </div>
-        </section>
+            </section>
 
 
-    {/* Mortgage Calculator */ }
-    <section className="my-14 lg:my-20 px-2 lg:px-6">
-        <div
-            className="
+            {/* Mortgage Calculator */}
+            <section className="my-14 lg:my-20 px-2 lg:px-6">
+                <div
+                    className="
             relative
             overflow-hidden
             mx-0
@@ -810,11 +855,11 @@ export default function BlueprintHero() {
             md:text-center
             text-white
         "
-        >
-            {/* Animated Diamonds */}
+                >
+                    {/* Animated Diamonds */}
 
-            <div
-                className="
+                    <div
+                        className="
                 absolute
                 top-0
                 right-0
@@ -828,10 +873,10 @@ export default function BlueprintHero() {
                 border-white/30
                 animate-pulse
             "
-            />
+                    />
 
-            <div
-                className="
+                    <div
+                        className="
                 absolute
                 top-16
                 right-8
@@ -846,11 +891,11 @@ export default function BlueprintHero() {
                 bg-white/15
                 animate-bounce
             "
-                style={{ animationDuration: "4s" }}
-            />
+                        style={{ animationDuration: "4s" }}
+                    />
 
-            <div
-                className="
+                    <div
+                        className="
                 absolute
                 top-2
                 right-16
@@ -862,47 +907,47 @@ export default function BlueprintHero() {
                 rotate-45
                 bg-white/25
             "
-            />
+                    />
 
-            {/* Mortgage Graph */}
-            <div className="hidden lg:block absolute top-4 right-20 opacity-20 pointer-events-none">
-                <svg
-                    width="460"
-                    height="350"
-                    viewBox="0 0 260 150"
-                    fill="none"
-                >
-                    {/* Grid */}
-                    <path d="M0 30H260" stroke="white" strokeOpacity=".15" />
-                    <path d="M0 70H260" stroke="white" strokeOpacity=".15" />
-                    <path d="M0 110H260" stroke="white" strokeOpacity=".15" />
+                    {/* Mortgage Graph */}
+                    <div className="hidden lg:block absolute top-4 right-20 opacity-20 pointer-events-none">
+                        <svg
+                            width="460"
+                            height="350"
+                            viewBox="0 0 260 150"
+                            fill="none"
+                        >
+                            {/* Grid */}
+                            <path d="M0 30H260" stroke="white" strokeOpacity=".15" />
+                            <path d="M0 70H260" stroke="white" strokeOpacity=".15" />
+                            <path d="M0 110H260" stroke="white" strokeOpacity=".15" />
 
-                    <path d="M40 0V150" stroke="white" strokeOpacity=".15" />
-                    <path d="M100 0V150" stroke="white" strokeOpacity=".15" />
-                    <path d="M160 0V150" stroke="white" strokeOpacity=".15" />
-                    <path d="M220 0V150" stroke="white" strokeOpacity=".15" />
+                            <path d="M40 0V150" stroke="white" strokeOpacity=".15" />
+                            <path d="M100 0V150" stroke="white" strokeOpacity=".15" />
+                            <path d="M160 0V150" stroke="white" strokeOpacity=".15" />
+                            <path d="M220 0V150" stroke="white" strokeOpacity=".15" />
 
-                    <path
-                        d="M10 120
+                            <path
+                                d="M10 120
                     C45 110 60 85 90 90
                     C120 95 145 40 180 55
                     C210 68 225 25 250 18"
-                        stroke="white"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        fill="none"
-                    />
+                                stroke="white"
+                                strokeWidth="3"
+                                strokeLinecap="round"
+                                fill="none"
+                            />
 
-                    <circle cx="10" cy="120" r="4" fill="white" />
-                    <circle cx="90" cy="90" r="4" fill="white" />
-                    <circle cx="180" cy="55" r="4" fill="white" />
-                    <circle cx="250" cy="18" r="5" fill="white" />
-                </svg>
-            </div>
+                            <circle cx="10" cy="120" r="4" fill="white" />
+                            <circle cx="90" cy="90" r="4" fill="white" />
+                            <circle cx="180" cy="55" r="4" fill="white" />
+                            <circle cx="250" cy="18" r="5" fill="white" />
+                        </svg>
+                    </div>
 
-            {/* Glow */}
-            <div
-                className="
+                    {/* Glow */}
+                    <div
+                        className="
                 absolute
                 -right-20
                 -top-20
@@ -916,12 +961,12 @@ export default function BlueprintHero() {
                 bg-white/10
                 blur-3xl
             "
-            />
+                    />
 
-            {/* Bottom Diamonds */}
+                    {/* Bottom Diamonds */}
 
-            <div
-                className="
+                    <div
+                        className="
                 absolute
                 bottom-0
                 left-0
@@ -935,10 +980,10 @@ export default function BlueprintHero() {
                 border-white/30
                 animate-pulse
             "
-            />
+                    />
 
-            <div
-                className="
+                    <div
+                        className="
                 absolute
                 bottom-14
                 left-8
@@ -953,11 +998,11 @@ export default function BlueprintHero() {
                 bg-white/15
                 animate-bounce
             "
-                style={{ animationDuration: "4s" }}
-            />
+                        style={{ animationDuration: "4s" }}
+                    />
 
-            <div
-                className="
+                    <div
+                        className="
                 absolute
                 bottom-2
                 left-16
@@ -969,22 +1014,22 @@ export default function BlueprintHero() {
                 rotate-45
                 bg-white/25
             "
-            />
+                    />
 
-            {/* Content */}
-            <div className="relative z-10">
+                    {/* Content */}
+                    <div className="relative z-10">
 
-                <h2 className="text-2xl md:text-3xl font-bold">
-                    Ready To Plan Your Future?
-                </h2>
+                        <h2 className="text-2xl md:text-3xl font-bold">
+                            Ready To Plan Your Future?
+                        </h2>
 
-                <p className="mt-4 md:mt-5 text-base md:text-lg text-white/90">
-                    Calculate your mortgage eligibility today.
-                </p>
+                        <p className="mt-4 md:mt-5 text-base md:text-lg text-white/90">
+                            Calculate your mortgage eligibility today.
+                        </p>
 
-                <a
-                    href="/calculator"
-                    className="
+                        <a
+                            href="/calculator"
+                            className="
                     mt-6
                     md:mt-8
                     inline-flex
@@ -1005,15 +1050,15 @@ export default function BlueprintHero() {
                     hover:scale-105
                     hover:shadow-2xl
                 "
-                >
-                    Calculate Mortgage →
-                </a>
+                        >
+                            Calculate Mortgage →
+                        </a>
 
-            </div>
-        </div>
-    </section>
+                    </div>
+                </div>
+            </section>
 
-    {/* Insights */ }
+            {/* Insights */}
             <section className="bg-gray-50 py-10 md:py-20 px-3 md:px-6">
 
                 <div className="mx-0 md:mx-auto md:max-w-4xl max-w-[300px] px-2">

@@ -3,21 +3,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-    Home,
-    Building2,
-    BadgeCheck,
-    Calculator,
-    Users,
-    Phone,
+  Aperture,
+  Fingerprint,
+  Orbit,
+  Calculator,
+  MessageSquareText,
+  Crown,
 } from "lucide-react";
 
 const menuItems = [
-    { label: "Home", href: "/", icon: Home },
-    { label: "About", href: "/about", icon: Users },
-    { label: "Services", href: "/services", icon: Building2 },
-    { label: "Golden Visa", href: "/visa", icon: BadgeCheck },
+    { label: "Home", href: "/", icon: Aperture },
+    { label: "About", href: "/about", icon: Fingerprint },
+    { label: "Services", href: "/services", icon: Orbit },
+    { label: "Golden Visa", href: "/visa", icon: Crown },
     { label: "Calculator", href: "/calculator", icon: Calculator },
-    { label: "Contact", href: "/contact", icon: Phone },
+    { label: "Contact", href: "/contact", icon: MessageSquareText },
 ];
 
 export default function Sidebar() {
@@ -26,7 +26,8 @@ export default function Sidebar() {
             className="
     fixed
     top-0
-    left-0
+    md:left-0
+    right-0
     z-50
 
     w-auto
@@ -52,7 +53,7 @@ export default function Sidebar() {
                     alt="FAB"
                     width={136}
                     height={140}
-                    className="object-contain w-18 h-auto md:w-[136px]"
+                    className="object-contain w-24 h-auto md:w-[136px]"
                 />
             </div>
 
@@ -66,7 +67,7 @@ export default function Sidebar() {
 
                     rounded-full
                     bg-[#0e847b]
-                    px-0
+                    px-4
                     py-1
                     opacity-80
 
@@ -77,6 +78,7 @@ export default function Sidebar() {
                     md:rounded-[40px]
                     md:px-0
                     md:py-0
+                    lg:top-0
                 "
             >
                 {menuItems.map((item) => {
@@ -93,8 +95,8 @@ export default function Sidebar() {
                                 items-center
                                 justify-center
 
-                                w-9
-                                h-6
+                                w-10
+                                h-10
 
                                 md:w-14
                                 md:h-14

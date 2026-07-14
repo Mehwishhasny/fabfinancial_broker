@@ -15,15 +15,15 @@ export default function ImageSlider() {
         <section
             className="
                 relative
-                w-[280px]
+                w-[300px]
                 lg:w-[1000px]
                 overflow-hidden
                 py-10
                 lg:py-20
                 px-6
-                lg:px-0
+                lg:px-20
                 mx-6
-                lg:ml-50
+                lg:ml-70
                 bg-transparent
             "
         >
@@ -31,6 +31,7 @@ export default function ImageSlider() {
                 className="
                     flex
                     w-max
+                    lg:w-[1200px]
                     animate-marquee
                     gap-10
                     sm:gap-14
