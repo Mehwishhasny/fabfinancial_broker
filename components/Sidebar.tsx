@@ -36,7 +36,7 @@ export default function Sidebar() {
     items-center
 
     px-4
-    gap-4
+    gap-6
 
     md:h-screen
     md:w-40

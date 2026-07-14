@@ -165,7 +165,7 @@ export default function BlueprintHero() {
     return (
         <>
             <section
-                className="min-h-screen bg-[#f8fbfb] flex flex-col lg:flex-row items-start lg:items-center justify-center px-2 md:px-6 lg:px-20 overflow-hidden relative"
+                className="min-h-screen bg-[#f8fbfb] flex flex-col lg:flex-row items-start lg:items-center justify-center px-4 md:px-6 lg:px-20 overflow-hidden relative"
             >
 
                 <div className="absolute md:-top-20 top-5 -right-20 md:h-92 h-50 md:w-92 w-50 rounded-full bg-[#0e847b]/20 blur-3xl" />
@@ -174,7 +174,7 @@ export default function BlueprintHero() {
                 <div className="w-full lg:w-1/2 px-6 lg:px-0 lg:ml-20 text-left flex flex-col items-start pt-20 lg:pt-0">
                     <h1
                         ref={titleRef}
-                        className="text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight"
+                        className="text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-black"
                     >
                         Build Your Path
                         <br />
@@ -201,7 +201,7 @@ export default function BlueprintHero() {
                         ref={houseRef}
                         viewBox="0 0 500 500"
                         fill="none"
-                        className="relative z-10 mx-auto w-[240px] sm:w-[300px] md:w-[380px] lg:w-full max-w-[520px]"
+                        className="relative z-10 mx-auto w-[300px] h-[300px] md:h-auto sm:w-[300px] md:w-[380px] lg:w-full max-w-[520px]"
                     >
 
                         <defs>
@@ -337,7 +337,7 @@ export default function BlueprintHero() {
             {/* About */}
             <section
                 id="about"
-                className="relative min-h-screen overflow-hidden bg-white flex md:items-center px-0 lg:px-16 py-16 lg:py-0"
+                className="relative min-h-screen overflow-hidden bg-white flex items-center px-0 lg:px-16 py-16 lg:py-0"
             >
                 {/* Background Decorations */}
                 <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-[#0e847b]/10 blur-3xl" />
@@ -461,13 +461,13 @@ export default function BlueprintHero() {
 
             <section
                 id="advisor"
-                className="relative overflow-hidden bg-[#f8fbfb] md:m-2 m-0 py-10 lg:py-20"
+                className="relative overflow-hidden bg-[#f8fbfb] md:m-2 m-0 py-10 lg:py-20 items-center"
             >
                 {/* Background */}
                 <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-[#0e847b]/10 blur-[120px]" />
                 <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-yellow-300/10 blur-[120px]" />
 
-                <div className="relative md:mx-auto mx-0 max-w-[300px] md:max-w-5xl px-5 lg:px-8">
+                <div className="relative md:mx-auto mx-0 max-w-[300px] md:max-w-5xl px-2 lg:px-8">
 
                     {/* Heading */}
                     <div className="text-center">
@@ -495,7 +495,7 @@ export default function BlueprintHero() {
                         <div
                             className="
                     absolute
-                    left-5
+                    left-10
                     lg:left-1/2
                     top-0
                     h-full
@@ -536,7 +536,7 @@ export default function BlueprintHero() {
                                 className="relative mb-16 lg:mb-20 flex flex-col lg:flex-row lg:items-center lg:min-h-[260px]">
 
                                 {/* ---------------- MOBILE IMAGE ---------------- */}
-                                <div className="lg:hidden w-full pl-10 pr-4">
+                                <div className="lg:hidden w-full pl-16 pr-4">
                                     <div className="overflow-hidden rounded-3xl shadow-xl">
                                         <Image
                                             src={item.image}
@@ -578,7 +578,7 @@ export default function BlueprintHero() {
 
                                     className={`
                                             mt-4
-                                            ml-10
+                                            ml-16
                                             mr-4
 
                                             lg:mt-0
@@ -620,7 +620,7 @@ export default function BlueprintHero() {
                             < div
                              className="
                                 absolute
-                                left-5
+                                left-10
                                 lg:left-1/2
                                 top-24
                                 lg:top-1/2
@@ -799,7 +799,8 @@ export default function BlueprintHero() {
             overflow-hidden
             mx-0
             md:mx-auto
-            md:max-w-3xl
+            md:w-6xl
+            md:max-w-5xl
             w-[300px]
             rounded-[30px]
             lg:rounded-[40px]
