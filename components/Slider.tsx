@@ -15,14 +15,14 @@ export default function ImageSlider() {
         <section
             className="
                 relative
-                w-full
+                w-[280px]
                 lg:w-[1000px]
                 overflow-hidden
                 py-10
                 lg:py-20
                 px-6
                 lg:px-0
-                mx-auto
+                mx-6
                 lg:ml-50
                 bg-transparent
             "

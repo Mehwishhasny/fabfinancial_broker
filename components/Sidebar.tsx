@@ -24,26 +24,26 @@ export default function Sidebar() {
     return (
         <aside
             className="
-                fixed
-                top-0
-                left-0
-                z-50
+    fixed
+    top-0
+    left-0
+    z-50
 
-                w-1/2
-                h-16
+    w-auto
+    h-16
 
-                flex
-                items-center
-                justify-between
+    flex
+    items-center
 
-                px-4
+    px-4
+    gap-4
 
-                md:h-screen
-                md:w-40
-                md:flex-col
-                md:justify-start
-                md:py-6
-            "
+    md:h-screen
+    md:w-40
+    md:flex-col
+    md:gap-6
+    md:py-6
+  "
         >
             {/* Logo */}
             <div className="flex items-center md:justify-center md:px-2 md:py-6">
@@ -52,7 +52,7 @@ export default function Sidebar() {
                     alt="FAB"
                     width={136}
                     height={140}
-                    className="object-contain w-20 h-auto md:w-[136px]"
+                    className="object-contain w-18 h-auto md:w-[136px]"
                 />
             </div>
 
@@ -62,12 +62,12 @@ export default function Sidebar() {
                     flex
                     flex-row
                     items-center
-                    gap-2
+                    gap-0
 
                     rounded-full
                     bg-[#0e847b]
-                    px-3
-                    py-2
+                    px-0
+                    py-1
                     opacity-80
 
                     md:mt-2
@@ -94,7 +94,7 @@ export default function Sidebar() {
                                 justify-center
 
                                 w-9
-                                h-9
+                                h-6
 
                                 md:w-14
                                 md:h-14
