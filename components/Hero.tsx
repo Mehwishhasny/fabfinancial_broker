@@ -218,7 +218,7 @@ export default function BlueprintHero() {
 
                     <button
                         ref={buttonRef}
-                        className="mt-6 md:mt-8 text-sm md:text-base px-6 py-3 rounded-full bg-[#0e847b] text-white font-medium border-2 border-white hover:bg-gray-200 hover:text-gray-800 transition"
+                        className="mt-6 md:mt-8 text-sm md:text-base px-6 py-3 rounded-full bg-[#0e847b] text-white font-medium border-2 border-gray-700 hover:bg-gray-200 hover:text-gray-800 transition"
                     >
                         <Link href="/calculator">
                             Get Started
@@ -249,8 +249,8 @@ export default function BlueprintHero() {
                         {/* Roof */}
                         <path
                             d="M100 220 L250 80 L400 220"
-                            stroke="#111"
-                            strokeWidth="4"
+                            stroke="#ffff"
+                            strokeWidth="6"
                             strokeLinecap="round"
                             filter="url(#glow)"
                         />
@@ -258,8 +258,8 @@ export default function BlueprintHero() {
                         {/* Left wall */}
                         <path
                             d="M130 220 V400"
-                            stroke="#111"
-                            strokeWidth="4"
+                            stroke="#ffff"
+                            strokeWidth="6"
                             strokeLinecap="round"
                             filter="url(#glow)"
                         />
@@ -267,8 +267,8 @@ export default function BlueprintHero() {
                         {/* Right wall */}
                         <path
                             d="M370 220 V400"
-                            stroke="#111"
-                            strokeWidth="4"
+                            stroke="#ffff"
+                            strokeWidth="6"
                             strokeLinecap="round"
                             filter="url(#glow)"
                         />
@@ -276,8 +276,8 @@ export default function BlueprintHero() {
                         {/* Bottom */}
                         <path
                             d="M130 400 H370"
-                            stroke="#111"
-                            strokeWidth="4"
+                            stroke="#ffff"
+                            strokeWidth="6"
                             strokeLinecap="round"
                             filter="url(#glow)"
                         />
@@ -285,8 +285,8 @@ export default function BlueprintHero() {
                         {/* Door */}
                         <path
                             d="M220 400 V290 H280 V400"
-                            stroke="#111"
-                            strokeWidth="4"
+                            stroke="#ffff"
+                            strokeWidth="6"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             filter="url(#glow)"
@@ -330,17 +330,17 @@ export default function BlueprintHero() {
          C45 110 60 85 90 90
          C120 95 145 40 180 55
          C210 68 225 25 250 18"
-                                stroke="black"
+                                stroke="white"
                                 strokeWidth="3"
                                 strokeLinecap="round"
                                 fill="none"
                             />
 
                             {/* Data points */}
-                            <circle cx="10" cy="120" r="4" fill="black" />
-                            <circle cx="90" cy="90" r="4" fill="black" />
-                            <circle cx="180" cy="55" r="4" fill="black" />
-                            <circle cx="250" cy="18" r="5" fill="black" />
+                            <circle cx="10" cy="120" r="4" fill="white" />
+                            <circle cx="90" cy="90" r="4" fill="white" />
+                            <circle cx="180" cy="55" r="4" fill="white" />
+                            <circle cx="250" cy="18" r="5" fill="white" />
                         </svg>
                     </div>
 
@@ -357,8 +357,8 @@ export default function BlueprintHero() {
         lg:h-92
         lg:w-92
         rounded-full
-        bg-white/10
-        blur-xl
+        bg-black/10
+        blur-2xl
 "
                     />
                 </div>
@@ -431,7 +431,7 @@ export default function BlueprintHero() {
                             and access to the UAE's leading banks and lenders.
                         </p>
 
-                        <p className="mt-5 lg:mt-6 text-base lg:text-lg leading-8 lg:leading-9 text-gray-600 max-w-[280px] md:max-w-full">
+                        <p className="mt-5 lg:mt-6 text-base lg:text-lg leading-8 lg:leading-9 text-gray-600 max-w-md md:max-w-full">
                             Whether you're purchasing your first home, expanding your
                             business, or planning long-term investments, we provide
                             transparent advice tailored to your goals.

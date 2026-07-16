@@ -8,7 +8,7 @@ export default function ServicesPage() {
 
     const services = [
         {
-            title: "Home Loans",
+            title: "Mortgages",
             image: "/images/mortgage.jpg",
             desc:
                 "Find the right mortgage solution with competitive rates from trusted UAE banks. We guide you through eligibility, approval, and documentation."

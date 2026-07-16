@@ -15,7 +15,7 @@ export default function ContactPage() {
       {/* HERO */}
       {/* ================================================= */}
 
-      <section className="relative overflow-hidden py-28 ml-40">
+      <section className="relative overflow-hidden py-20 md:py-28 md:ml-40 px-5 md:px-0">
 
         {/* Background Image */}
         <Image
@@ -25,21 +25,21 @@ export default function ContactPage() {
           className="object-cover opacity-15"
         />
 
-         {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60" />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60" />
 
 
-                {/* Decorative Blurs */}
-                <div className="absolute -top-24 right-0 h-96 w-96 rounded-full bg-yellow-400/20 blur-3xl" />
+        {/* Decorative Blurs */}
+        <div className="absolute -top-24 right-0 h-96 w-96 rounded-full bg-yellow-400/20 blur-3xl" />
 
-                <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#0e847b]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#0e847b]/10 blur-3xl" />
 
         {/* Background Blur */}
         <div className="absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-[#0e847b]/10 blur-[120px]" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-8">
+        <div className="relative z-10 mx-auto max-w-7xl px-0 md:px-8">
 
-          <div className="grid items-center gap-20 lg:grid-cols-2">
+          <div className="grid items-center gap-12 md:gap-20 lg:grid-cols-2">
 
             {/* LEFT */}
 
@@ -49,7 +49,7 @@ export default function ContactPage() {
                 Contact FAB
               </p>
 
-              <h1 className="mt-6 text-6xl font-bold leading-tight text-gray-900">
+              <h1 className="mt-6 text-3xl md:text-6xl font-bold leading-tight text-gray-900">
 
                 Let's Build
 
@@ -59,7 +59,7 @@ export default function ContactPage() {
 
               </h1>
 
-              <p className="mt-8 max-w-xl text-lg leading-9 text-gray-600">
+              <p className="mt-6 max-w-xl text-base md:text-lg leading-7 md:leading-9 text-gray-600">
 
                 Whether you're buying your dream home,
                 looking for business finance, or planning
@@ -68,9 +68,10 @@ export default function ContactPage() {
 
               </p>
 
-              <button
-                className="
-                  mt-10
+              <button className="
+mt-8
+w-full
+md:w-auto
                   rounded-full
                   bg-[#0e847b]
                   px-8
@@ -93,14 +94,11 @@ export default function ContactPage() {
 
               <Image
                 src="/images/contact-team.jpg"
-                alt=""
+                alt="contact"
                 width={520}
                 height={650}
-                className="
-                  rounded-[40px]
-                  shadow-2xl
-                  object-cover
-                "
+                className="w-full max-w-[520px] rounded-[30px] md:rounded-[40px] shadow-2xl object-cover"
+
               />
 
               {/* Floating Card */}
@@ -108,8 +106,10 @@ export default function ContactPage() {
               <div
                 className="
                   absolute
-                  -right-10
-                  -bottom-8
+right-4
+bottom-4
+md:-right-10
+md:-bottom-8
                   rounded-3xl
                   bg-white
                   p-4
@@ -131,7 +131,7 @@ export default function ContactPage() {
 
               </div>
 
-             
+
 
             </div>
 
@@ -145,9 +145,9 @@ export default function ContactPage() {
       {/* CONTACT CARDS */}
       {/* ================================================= */}
 
-      <section className="py-20 ml-40">
+      <section className="py-16 md:py-20 md:ml-40 px-5 md:px-0">
 
-        <div className="mx-auto max-w-7xl px-8">
+        <div className="mx-auto max-w-7xl px-0 md:px-8">
 
           <div className="text-center">
 
@@ -164,8 +164,7 @@ export default function ContactPage() {
             </p>
 
           </div>
-
-          <div className="mt-16 grid gap-8 lg:grid-cols-3">
+<div className="mt-12 md:mt-16 grid gap-6 md:gap-8 lg:grid-cols-3">
 
             {/* CARD */}
 
@@ -188,7 +187,7 @@ export default function ContactPage() {
                 value: "Office 1104, Al Fattan Office Tower, Business Hub, Dubai Marina P.O. Box 48395",
                 desc: "Dubai, UAE",
               },
-        
+
             ].map((item, index) => (
 
               <div
@@ -199,7 +198,8 @@ export default function ContactPage() {
                   overflow-hidden
                   rounded-[35px]
                   bg-white
-                  p-8
+                  p-6 
+                  md:p-8
                   shadow-lg
                   transition-all
                   duration-500
@@ -211,8 +211,10 @@ export default function ContactPage() {
                 <div
                   className="
                     flex
-                    h-16
-                    w-16
+                 h-14
+w-14
+md:h-16
+md:w-16
                     items-center
                     justify-center
                     rounded-2xl
@@ -227,7 +229,7 @@ export default function ContactPage() {
                   {item.icon}
                 </div>
 
-                <h3 className="mt-8 text-2xl font-bold">
+                <h3 className="mt-8 text-xl md:text-2xl font-bold">
                   {item.title}
                 </h3>
 
@@ -258,19 +260,19 @@ export default function ContactPage() {
         </div>
 
       </section>
-            {/* ================================================= */}
+      {/* ================================================= */}
       {/* CONTACT FORM + PROCESS */}
       {/* ================================================= */}
 
-      <section className="relative overflow-hidden py-24 ml-40">
+      <section className="relative overflow-hidden py-16 md:py-24 md:ml-40 px-5 md:px-0">
 
         {/* Background Glow */}
         <div className="absolute -top-32 left-0 h-80 w-80 rounded-full bg-[#0e847b]/10 blur-[120px]" />
         <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-yellow-300/10 blur-[120px]" />
 
-        <div className="mx-auto max-w-7xl px-8">
+        <div className="mx-auto max-w-7xl px-0 md:px-8">
 
-          <div className="grid gap-16 lg:grid-cols-2">
+          <div className="grid gap-12 md:gap-16 lg:grid-cols-2">
 
             {/* ================================================= */}
             {/* CONTACT FORM */}
@@ -282,13 +284,13 @@ export default function ContactPage() {
                 Send a Message
               </p>
 
-              <h2 className="mt-5 text-5xl font-bold text-gray-900">
+              <h2 className="mt-5 text-3xl md:text-5xl font-bold">
                 Let's Talk About
                 <br />
                 Your Goals
               </h2>
 
-              <p className="mt-6 max-w-xl text-lg leading-8 text-gray-600">
+              <p className="mt-6 max-w-xl text-base md:text-lg leading-7 md:leading-8">
                 Fill in the form below and one of our financial
                 specialists will contact you shortly.
               </p>
@@ -297,7 +299,7 @@ export default function ContactPage() {
 
                 <div className="beam absolute inset-0"></div>
 
-                <div className="relative z-10 rounded-[38px] bg-white p-10">
+                <div className="relative z-10 rounded-[38px] bg-white p-6 md:p-10">
 
                   <form className="space-y-6">
 
@@ -325,7 +327,7 @@ export default function ContactPage() {
 
                     </div>
 
-                    <div className="grid gap-5 md:grid-cols-2">
+                    <div className="grid gap-5 grid-cols-1 md:grid-cols-2">
 
                       <div>
 
@@ -394,7 +396,7 @@ export default function ContactPage() {
                         "
                       >
 
-                        <option>Home Loan</option>
+                        <option>Mortgages</option>
                         <option>Business Finance</option>
                         <option>Golden Visa</option>
                         <option>Financial Advisory</option>
@@ -428,9 +430,12 @@ export default function ContactPage() {
                     </div>
 
                     <button
-                      className="
+                   className="
                         group
                         flex
+                        w-full
+                        md:w-auto
+                        justify-center
                         items-center
                         gap-3
                         rounded-full
@@ -523,10 +528,12 @@ export default function ContactPage() {
                       group
                       relative
                       mb-10
-                      ml-16
+                      ml-12 
+                      md:ml-16
                       rounded-3xl
                       bg-white
-                      p-7
+                      p-5
+                       md:p-7
                       shadow-lg
                       transition
                       duration-500
@@ -540,11 +547,14 @@ export default function ContactPage() {
                     <div
                       className="
                         absolute
-                        -left-[52px]
+                        -left-[42px]
+md:-left-[52px]
                         top-8
                         flex
-                        h-12
-                        w-12
+                        h-10
+w-10
+md:h-12
+md:w-12
                         items-center
                         justify-center
                         rounded-full
@@ -559,11 +569,11 @@ export default function ContactPage() {
                       {step.icon}
                     </div>
 
-                    <h3 className="text-2xl font-bold text-[#0e847b]">
+                    <h3 className="text-xl md:text-2xl font-bold text-[#0e847b]">
                       {step.title}
                     </h3>
 
-                    <p className="mt-3 leading-8 text-gray-600">
+                    <p className="mt-3 leading-7 md:leading-8 text-gray-600">
                       {step.desc}
                     </p>
 
@@ -585,6 +595,6 @@ export default function ContactPage() {
 
 
       <Footer />
-      </main>
+    </main>
   )
 }

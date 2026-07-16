@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Footer from "@/components/Footer";
 import Sidebar from "@/components/Sidebar";
 import Image from "next/image";
@@ -8,6 +8,7 @@ import Image from "next/image";
 export default function AboutPage() {
 
     const [active, setActive] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
 
 
     const testimonials = [
@@ -40,17 +41,17 @@ export default function AboutPage() {
             <Sidebar />
 
             {/* Hero */}
-            <section className="relative overflow-hidden px-8 py-28">
+            <section className="relative overflow-hidden px-5 md:px-8 py-20 md:py-28">
 
- {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60" />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60" />
 
                 {/* Decorative Blurs */}
                 <div className="absolute -top-24 right-0 h-96 w-96 rounded-full bg-yellow-400/20 blur-3xl" />
 
                 <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#0e847b]/10 blur-3xl" />
 
-                <div className="relative z-10 mx-auto max-w-6xl ml-40">
+                <div className="relative z-10 mx-auto max-w-6xl md:ml-40 text-center md:text-left">
 
                     <p className="uppercase tracking-[0.4em] text-[#0e847b] font-semibold">
                         About FAB
@@ -60,7 +61,7 @@ export default function AboutPage() {
                         Your Trusted Partner in Financial Success
                     </h1>
 
-                    <p className="mt-8 max-w-3xl text-lg leading-8 text-gray-600">
+                    <p className="mt-6 max-w-3xl text-base md:text-lg leading-7 md:leading-8 text-gray-600">
                         At Financial Broker (FAB), we simplify financial decisions
                         with expert guidance and tailored financial solutions across UAE.
                     </p>
@@ -72,25 +73,16 @@ export default function AboutPage() {
 
 
             {/* Who We Are */}
-            <section className="bg-white px-8 py-20 ml-40">
+            <section className="bg-white px-5 md:px-8 py-16 md:py-20 md:ml-40">
 
-                <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-2 items-center">
+                <div className="mx-auto grid max-w-6xl gap-10 md:gap-14 md:grid-cols-2 items-center">
 
 
                     {/* LEFT IMAGE */}
                     <div className="relative">
 
-                        <div className="
-                absolute 
-                -left-5 
-                -top-5 
-                h-full 
-                w-full 
-                rounded-[40px] 
-                border-2 
-                border-[#0e847b]
-            ">
-                        </div>
+                        {/* Decorative box */}
+                        <div className="absolute -left-4 lg:-left-8 -top-4 lg:-top-8 h-full w-full rounded-[30px] lg:rounded-[40px] border-2 border-[#0e847b]" />
 
 
                         <Image
@@ -99,13 +91,13 @@ export default function AboutPage() {
                             width={300}
                             height={300}
                             className="
-                    relative
-                    h-[300px]
-                    w-full
-                    rounded-[40px]
-                    object-cover
-                    shadow-xl
-                "
+                                    relative
+                                    h-[300px]
+                                    w-full
+                                    rounded-[40px]
+                                    object-cover
+                                    shadow-xl
+                                "
                         />
 
                     </div>
@@ -116,7 +108,7 @@ export default function AboutPage() {
                     <div>
 
 
-                        <h2 className="text-3xl font-bold text-gray-900">
+                        <h2 className="text-2xl md:text-3xl font-bold">
                             Who Are We
                         </h2>
 
@@ -145,12 +137,11 @@ export default function AboutPage() {
                 bg-[#0e847b]/10
                 p-8
             ">
-
-                            <div className="grid grid-cols-2 gap-8">
+                            <div className="grid grid-cols-2 gap-5 md:gap-8">
 
 
                                 <div>
-                                    <h3 className="text-3xl font-bold text-[#0e847b]">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-[#0e847b]">
                                         500+
                                     </h3>
                                     <p className="mt-2 text-gray-700">
@@ -161,7 +152,7 @@ export default function AboutPage() {
 
 
                                 <div>
-                                    <h3 className="text-3xl font-bold text-[#0e847b]">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-[#0e847b]">
                                         10+
                                     </h3>
                                     <p className="mt-2 text-gray-700">
@@ -172,7 +163,7 @@ export default function AboutPage() {
 
 
                                 <div>
-                                    <h3 className="text-3xl font-bold text-[#0e847b]">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-[#0e847b]">
                                         100%
                                     </h3>
                                     <p className="mt-2 text-gray-700">
@@ -183,7 +174,7 @@ export default function AboutPage() {
 
 
                                 <div>
-                                    <h3 className="text-3xl font-bold text-[#0e847b]">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-[#0e847b]">
                                         UAE
                                     </h3>
                                     <p className="mt-2 text-gray-700">
@@ -207,162 +198,168 @@ export default function AboutPage() {
 
 
             {/* Mission Vision */}
-           {/* Mission Vision */}
-<section className="px-8 py-20 ml-40">
+            <section className="px-5 md:px-8 py-16 md:py-20 md:ml-40">
 
-    <div className="mx-auto max-w-6xl">
+                <div className="mx-auto max-w-6xl">
 
-        <div className="text-center mb-14">
+                    <div className="text-center mb-14">
 
-            <p className="uppercase tracking-[0.4em] text-[#0e847b] font-semibold">
-                Our Foundation
-            </p>
+                        <p className="uppercase tracking-[0.4em] text-[#0e847b] font-semibold">
+                            Our Foundation
+                        </p>
 
-            <h2 className="mt-5 text-4xl font-bold text-gray-900">
-                Our Mission & Vision
-            </h2>
+                        <h2 className="mt-5 text-4xl font-bold text-gray-900">
+                            Our Mission & Vision
+                        </h2>
 
-        </div>
-
+                    </div>
 
 
-        <div className="grid gap-10 md:grid-cols-2">
+
+                    <div className="grid gap-10 md:grid-cols-2">
 
 
-            {/* Mission */}
-            <div className="relative overflow-hidden rounded-3xl p-[2px] beam-card">
+                        {/* Mission */}
+                        <div className="relative overflow-hidden rounded-3xl p-[2px] beam-card">
 
 
-                {/* Moving Beam */}
-                <div className="beam absolute inset-0"></div>
+                            {/* Moving Beam */}
+                            <div className="beam absolute inset-0"></div>
 
 
-                {/* Card */}
-                <div className="
+                            {/* Card */}
+                            <div className="
                     relative 
                     z-10
                     rounded-[22px]
                     bg-white
-                    p-10
+                    p-6 
+                    md:p-10
                     h-full
                 ">
 
-                    <div className="
+                                <div className="
                         flex
-                        h-14
-                        w-14
+                       h-12 
+                       w-12 
+                       md:h-14 
+                       md:w-14
                         items-center
                         justify-center
                         rounded-2xl
                         bg-[#0e847b]/10
                         text-2xl
                     ">
-                        🎯
-                    </div>
+                                    🎯
+                                </div>
 
 
-                    <h3 className="
+                                <h3 className="
                         mt-6
-                        text-3xl
+                        text-2xl 
+                        md:text-3xl
                         font-bold
                         text-[#0e847b]
                     ">
-                        Our Mission
-                    </h3>
+                                    Our Mission
+                                </h3>
 
 
-                    <p className="
+                                <p className="
                         mt-5
                         leading-8
                         text-gray-600
                     ">
-                        To empower individuals and businesses with
-                        transparent financial guidance, smart solutions,
-                        and expert support that helps them achieve
-                        long-term success.
-                    </p>
+                                    To empower individuals and businesses with
+                                    transparent financial guidance, smart solutions,
+                                    and expert support that helps them achieve
+                                    long-term success.
+                                </p>
 
 
-                </div>
+                            </div>
 
-            </div>
-
-
+                        </div>
 
 
 
-            {/* Vision */}
-            <div className="relative overflow-hidden rounded-3xl p-[2px] beam-card">
 
 
-                {/* Moving Beam */}
-                <div className="beam absolute inset-0"></div>
+                        {/* Vision */}
+                        <div className="relative overflow-hidden rounded-3xl p-[2px] beam-card">
 
 
-                {/* Card */}
-                <div className="
+                            {/* Moving Beam */}
+                            <div className="beam absolute inset-0"></div>
+
+
+                            {/* Card */}
+                            <div className="
                     relative
                     z-10
                     rounded-[22px]
                     bg-white
-                    p-10
+                    md:p-10
+                    p-6
                     h-full
                 ">
 
 
-                    <div className="
+                                <div className="
                         flex
-                        h-14
-                        w-14
+                           h-12 
+                       w-12 
+                       md:h-14 
+                       md:w-14
                         items-center
                         justify-center
                         rounded-2xl
                         bg-[#0e847b]/10
                         text-2xl
                     ">
-                        🚀
-                    </div>
+                                    🚀
+                                </div>
 
 
-                    <h3 className="
+                                <h3 className="
                         mt-6
                         text-3xl
                         font-bold
                         text-[#0e847b]
                     ">
-                        Our Vision
-                    </h3>
+                                    Our Vision
+                                </h3>
 
 
-                    <p className="
+                                <p className="
                         mt-5
                         leading-8
                         text-gray-600
                     ">
-                        To become one of the UAE's most trusted financial
-                        partners by delivering excellence, innovation,
-                        and customer-focused financial experiences.
-                    </p>
+                                    To become one of the UAE's most trusted financial
+                                    partners by delivering excellence, innovation,
+                                    and customer-focused financial experiences.
+                                </p>
 
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
 
                 </div>
 
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
+            </section>
 
 
-           {/* Why Choose Us */}
-<section className="relative overflow-hidden bg-[#0b1f1d] ml-35 mx-10 py-24 text-white">
+            {/* Why Choose Us */}
+            <section className="relative overflow-hidden bg-[#0b1f1d] md:ml-35 mx-4 md:mx-10 py-16 md:py-24 rounded-3xl text-white">
 
-    {/* Decorative circles */}
-    <div className="
+                {/* Decorative circles */}
+                <div className="
         absolute 
         -top-40 
         -right-40 
@@ -373,7 +370,7 @@ export default function AboutPage() {
         blur-3xl
     " />
 
-    <div className="
+                <div className="
         absolute 
         bottom-0 
         -left-40 
@@ -385,42 +382,38 @@ export default function AboutPage() {
     " />
 
 
-    <div className="relative mx-auto max-w-6xl px-6 text-center">
+                <div className="relative mx-auto max-w-6xl px-6 text-center">
 
 
-        <p className="
+                    <p className="
             uppercase 
             tracking-[0.5em] 
             text-[#14b8a6]
             font-semibold
         ">
-            Why Choose FAB
-        </p>
+                        Why Choose FAB
+                    </p>
 
 
-        <h2 className="
-            mt-5 
-            text-3xl 
-            font-bold
-        ">
-            Built Around Your Financial Goals
-        </h2>
+                    <h2 className="mt-5 text-2xl md:text-3xl font-bold">
+                        Built Around Your Financial Goals
+                    </h2>
 
 
-        <p className="
+                    <p className="
             mx-auto
             mt-6
             max-w-2xl
             text-gray-300
             leading-8
         ">
-            We don't just provide financial products. We create
-            strategies that help you move confidently toward your future.
-        </p>
+                        We don't just provide financial products. We create
+                        strategies that help you move confidently toward your future.
+                    </p>
 
 
 
-        <div className="
+                    <div className="
             mt-10
             grid
             gap-5
@@ -428,38 +421,40 @@ export default function AboutPage() {
         ">
 
 
-            {[
-                {
-                    number:"01",
-                    title:"Expert Guidance",
-                    desc:"From your first consultation to final approval, our experts guide every decision."
-                },
-                {
-                    number:"02",
-                    title:"Personal Approach",
-                    desc:"Every client receives solutions designed around their financial situation."
-                },
-                {
-                    number:"03",
-                    title:"Strong Partnerships",
-                    desc:"We connect you with trusted banking networks across the UAE."
-                }
+                        {[
+                            {
+                                number: "01",
+                                title: "Expert Guidance",
+                                desc: "From your first consultation to final approval, our experts guide every decision."
+                            },
+                            {
+                                number: "02",
+                                title: "Personal Approach",
+                                desc: "Every client receives solutions designed around their financial situation."
+                            },
+                            {
+                                number: "03",
+                                title: "Strong Partnerships",
+                                desc: "We connect you with trusted banking networks across the UAE."
+                            }
 
-            ].map((item,index)=>(
+                        ].map((item, index) => (
 
 
-                <div
-                    key={index}
-                    className="
+                            <div
+                                key={index}
+                                className="
                     group
                     relative
-                    h-[300px]
+                    min-h-[260px] 
+                    md:h-[300px]
                     overflow-hidden
                     rounded-[35px]
                     border
                     border-white/10
                     bg-white/20
-                    p-8
+                    p-6 
+                    md:p-8
                     text-left
                     backdrop-blur-xl
                     transition-all
@@ -467,34 +462,35 @@ export default function AboutPage() {
                     hover:-translate-y-4
                     hover:bg-white/10
                     "
-                >
+                            >
 
 
-                    {/* Background Number */}
-                    <span className="
+                                {/* Background Number */}
+                                <span className="
                         absolute
                         -right-5
                         -top-10
-                        text-[120px]
+                        text-[90px] 
+                        md:text-[120px]
                         font-bold
                         text-white/5
                         transition
                         duration-500
                         group-hover:text-[#0e847b]/20
                     ">
-                        {item.number}
-                    </span>
+                                    {item.number}
+                                </span>
 
 
 
-                    {/* Content */}
-                    <div className="
+                                {/* Content */}
+                                <div className="
                         relative
                         z-10
                     ">
 
 
-                        <div className="
+                                    <div className="
                             flex
                             h-10
                             w-10
@@ -508,31 +504,31 @@ export default function AboutPage() {
                             duration-500
                             group-hover:scale-110
                         ">
-                            {item.number}
-                        </div>
+                                        {item.number}
+                                    </div>
 
 
 
-                        <h3 className="
+                                    <h3 className="
                             mt-8
                             text-xl
                             font-bold
                         ">
-                            {item.title}
-                        </h3>
+                                        {item.title}
+                                    </h3>
 
 
-                        <p className="
+                                    <p className="
                             mt-5
                             leading-7
                             text-gray-300
                         ">
-                            {item.desc}
-                        </p>
+                                        {item.desc}
+                                    </p>
 
 
 
-                        <div className="
+                                    <div className="
                             mt-8
                             h-[2px]
                             w-0
@@ -543,147 +539,152 @@ export default function AboutPage() {
                         "/>
 
 
+                                </div>
+
+
+                            </div>
+
+
+                        ))}
+
+
                     </div>
 
 
                 </div>
 
+            </section>
 
-            ))}
+            {/* Insights */}
+            <section className="bg-gray-50 py-10 md:py-20 px-4">
 
-
-        </div>
-
-
-    </div>
-
-</section>
-
- {/* Insights */}
-            <section className="bg-gray-50 py-20 px-6">
-
-                <div className="mx-auto max-w-4xl">
+                <div className="mx-auto w-full max-w-[350px] sm:max-w-md md:max-w-4xl">
 
                     {/* Heading */}
                     <div className="text-center">
 
-                        <h2 className="text-2xl font-bold text-[#0e847b] underline underline-offset-6">
+                        <h2 className="text-xl md:text-2xl font-bold text-[#0e847b] underline underline-offset-6">
                             CUSTOMER INSIGHTS
                         </h2>
 
-                        <p className="mt-3 text-gray-600">
+                        <p className="mt-3 text-sm md:text-base text-gray-600">
                             Explore their experiences
                         </p>
 
                     </div>
 
+                    {/* Cards */}
+                    <div className="mt-10 md:mt-14 overflow-hidden w-full">
 
-                   {/* Cards */}
-<div className="mt-14 overflow-hidden">
-
-    <div
-        className="
-            flex 
-            gap-6
-            transition-transform 
-            duration-700
-            ease-in-out
-        "
-        style={{
-            transform: `translateX(-${active * 50}%)`
-        }}
-    >
-
-        {testimonials.map((item, index) => (
-
-            <div
-                key={index}
-                className="
-                    min-w-[calc(50%-12px)]
-                    rounded-3xl
-                    bg-white
-                    p-6
-                    shadow-lg
-                    transition
-                    duration-500
-                    hover:-translate-y-2
+                        <div
+                            className="
+                    flex
+                    gap-4
+                    md:gap-6
+                    transition-transform
+                    duration-700
+                    ease-in-out
                 "
-            >
+                            style={{
+                                transform: `translateX(-${isMobile ? active * 100 : active * 50}%)`,
+                            }}
+                        >
 
-                <div className="text-3xl text-[#0e847b]">
-                    "
-                </div>
+                            {testimonials.map((item, index) => (
 
-
-                <p className="mt-4 text-gray-600 leading-relaxed">
-                    {item.quote}
-                </p>
-
-
-
-                <div className="mt-6 flex items-center gap-4">
-
-                    <div
-                        className="
-                            flex 
-                            h-12 
-                            w-12 
-                            items-center 
-                            justify-center
-                            rounded-full
-                            bg-[#0e847b]
-                            text-white
-                            font-bold
+                                <div
+                                    key={index}
+                                    className="
+                            min-w-full 
+                            w-full
+                            md:min-w-[calc(50%-12px)]
+                            rounded-3xl
+                            bg-white
+                            p-5
+                            md:p-6
+                            shadow-lg
+                            transition
+                            duration-500
+                            hover:-translate-y-2
                         "
-                    >
-                        {item.initials}
+                                >
+
+                                    <div className="text-2xl md:text-3xl text-[#0e847b]">
+                                        "
+                                    </div>
+
+                                    <p className="mt-4 text-sm md:text-base text-gray-600 leading-7 md:leading-relaxed">
+                                        {item.quote}
+                                    </p>
+
+                                    <div className="mt-6 flex items-center gap-4">
+
+                                        <div
+                                            className="
+                                    flex
+                                    h-10
+                                    w-10
+                                    md:h-12
+                                    md:w-12
+                                    items-center
+                                    justify-center
+                                    rounded-full
+                                    bg-[#0e847b]
+                                    text-white
+                                    text-sm
+                                    md:text-base
+                                    font-bold
+                                "
+                                        >
+                                            {item.initials}
+                                        </div>
+
+                                        <div>
+
+                                            <h4 className="text-sm font-semibold text-gray-900">
+                                                {item.name}
+                                            </h4>
+
+                                            <p className="text-xs md:text-sm text-gray-500">
+                                                {item.role}
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            ))}
+
+                        </div>
+
                     </div>
-
-
-                    <div>
-
-                        <h4 className="text-sm font-semibold text-gray-900">
-                            {item.name}
-                        </h4>
-
-                        <p className="text-sm text-gray-500">
-                            {item.role}
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-        ))}
-
-
-    </div>
-
-</div>
 
                     {/* Dots */}
-                    <div className="mt-10 flex justify-center gap-3">
+                    <div className="mt-8 md:mt-10 flex justify-center gap-3">
 
                         {testimonials.map((_, index) => (
+
                             <button
                                 key={index}
                                 onMouseEnter={() => setActive(index)}
+                                onClick={() => setActive(index)}
                                 className={`
-                        h-3 rounded-full transition-all duration-300
+                        h-2.5 md:h-3
+                        rounded-full
+                        transition-all
+                        duration-300
                         ${active === index
-                                        ? "w-10 bg-[#0e847b]"
-                                        : "w-3 bg-gray-300"
+                                        ? "w-8 md:w-10 bg-[#0e847b]"
+                                        : "w-2.5 md:w-3 bg-gray-300"
                                     }
                     `}
                             />
+
                         ))}
 
                     </div>
-
 
                 </div>
 
