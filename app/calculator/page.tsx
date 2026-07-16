@@ -30,17 +30,17 @@ export default function MortgageCalculator() {
 
 
     const downPaymentPercentage =
-    residencyStatus === "Second Mortgage"
-        ? 60
-        : 30;
+        residencyStatus === "Second Mortgage"
+            ? 60
+            : 30;
 
 
-const downPayment =
-    propertyPrice * (downPaymentPercentage / 100);
+    const downPayment =
+        propertyPrice * (downPaymentPercentage / 100);
 
 
-const loanAmount =
-    propertyPrice - downPayment;
+    const loanAmount =
+        propertyPrice - downPayment;
 
 
 
@@ -80,11 +80,11 @@ const loanAmount =
 
             <section
                 className="
-                relative
-                overflow-hidden
-                py-28
-                px-8
-                "
+    relative
+    overflow-hidden
+    py-20 md:py-28
+    px-5 md:px-8
+  "
             >
 
 
@@ -208,16 +208,14 @@ const loanAmount =
                 />
 
 
-
-
-
                 <div
                     className="
-                    relative
-                    z-10
-                    ml-40
-                    max-w-6xl
-                    "
+                                relative
+                                z-10
+                                ml-0
+                                md:ml-40
+                                max-w-6xl
+                            "
                 >
 
 
@@ -237,7 +235,8 @@ const loanAmount =
                     <h1
                         className="
                         mt-6
-                        text-5xl
+                        text-3xl
+md:text-5xl
                         font-bold
                         text-gray-900
                         leading-tight
@@ -257,7 +256,8 @@ const loanAmount =
                         className="
                         mt-8
                         max-w-3xl
-                        text-xl
+                        text-base
+md:text-xl
                         leading-8
                         text-gray-600
                         "
@@ -275,18 +275,17 @@ const loanAmount =
                         href="#calculator"
                         className="
                         inline-flex
-                        mt-10
+                        mt-8
+                        md:mt-10
                         rounded-full
                         bg-[#0e847b]
-                        px-8
-                        py-4
-                        text-white
-                        font-semibold
-                        shadow-lg
-                        hover:-translate-y-1
-                        transition
-                        "
-                    >
+                        px-6
+                        md:px-8
+                        py-3
+                        md:py-4
+                        text-sm
+                        md:text-base
+                        ">
 
                         Calculate EMI →
 
@@ -308,17 +307,25 @@ const loanAmount =
             <section
                 id="calculator"
                 className="
-                relative
-                overflow-hidden
-                mx-10
-                ml-35
-                my-20
-                rounded-[40px]
-                bg-white
-                py-20
-                px-10
-                shadow-xl
-                "
+    relative
+    overflow-hidden
+    mx-4
+    md:mx-8
+    lg:mx-10
+    lg:ml-35
+    my-10
+    md:my-20
+    rounded-[25px]
+    md:rounded-[40px]
+    bg-white
+    py-10
+    md:py-16
+    lg:py-20
+    px-5
+    md:px-8
+    lg:px-10
+    shadow-xl
+  "
             >
 
 
@@ -327,43 +334,45 @@ const loanAmount =
 
                     {/* Resident Toggle */}
 
-                    <div
-                        className="
-                        flex
-                        justify-center
-                        mb-12
-                        "
-                    >
 
+                    <div className="flex justify-center mb-10">
                         <div
                             className="
-                            flex
-                            rounded-full
-                            bg-[#f8fbfb]
-                            p-2
-                            shadow
-                            "
-                        >
+      flex
+      flex-col
+      sm:flex-row
+      rounded-3xl
+      sm:rounded-full
+      bg-[#f8fbfb]
+      p-2
+      shadow
+      w-full
+      sm:w-auto
+    "
+                        ></div>
 
-                            {["Resident","Non Resident"].map(
-                                (item)=>(
+                        {["Resident", "Non Resident"].map(
+                            (item) => (
 
                                 <button
-                                key={item}
-                                onClick={()=>setResidentType(item)}
-                                className={`
-                                px-8
-                                py-3
-                                rounded-full
-                                transition
-                                ${
-                                    residentType===item
-                                    ?
-                                    "bg-[#0e847b] text-white"
-                                    :
-                                    "text-gray-600"
-                                }
-                                `}
+                                    key={item}
+                                    onClick={() => setResidentType(item)}
+                                    className={`
+  w-full
+  sm:w-auto
+  min-w-[170px]
+  px-6
+  py-3
+  rounded-full
+  text-sm
+  md:text-base
+  font-medium
+  transition
+  ${residentType === item
+                                            ? "bg-[#0e847b] text-white"
+                                            : "text-gray-700 hover:bg-gray-100"
+                                        }
+`}
                                 >
 
                                     {item}
@@ -374,37 +383,29 @@ const loanAmount =
                             ))}
 
 
-                        </div>
-
-
                     </div>
 
 
 
-
-
-                    <div
-                        className="
-                        grid
-                        gap-10
-                        md:grid-cols-2
-                        "
-                    >
+                    <div className="grid gap-8 lg:gap-10 lg:grid-cols-2">
 
 
                         {/* LEFT CALCULATOR */}
-
                         <div
                             className="
-                            rounded-[35px]
-                            bg-[#f8fbfb]
-                            p-10
-                            "
+    rounded-[25px]
+    md:rounded-[35px]
+    bg-[#f8fbfb]
+    p-5
+    md:p-8
+    lg:p-10
+  "
                         >
 
                             <h2
                                 className="
-                                text-3xl
+                                text-2xl
+md:text-3xl
                                 font-bold
                                 text-gray-900
                                 "
@@ -422,16 +423,16 @@ const loanAmount =
 
 
 
-                                                        {/* Residency Status */}
+                            {/* Residency Status */}
 
-                            <label className="block mt-8 text-sm font-semibold text-gray-700">
+                            <label className="block mt-8 text-sm font-semibold text-gray-800">
                                 Residency Status
                             </label>
 
 
                             <select
                                 value={residencyStatus}
-                                onChange={(e)=>
+                                onChange={(e) =>
                                     setResidencyStatus(e.target.value)
                                 }
                                 className="
@@ -441,7 +442,9 @@ const loanAmount =
                                 border
                                 border-gray-200
                                 bg-white
-                                p-4
+                                
+                                p-3
+md:p-4
                                 outline-none
                                 "
                             >
@@ -468,7 +471,7 @@ const loanAmount =
                             mt-6
                             text-sm
                             font-semibold
-                            text-gray-700
+                            text-gray-800
                             ">
 
                                 Mortgage Type
@@ -480,7 +483,7 @@ const loanAmount =
 
                                 value={mortgageType}
 
-                                onChange={(e)=>
+                                onChange={(e) =>
                                     setMortgageType(e.target.value)
                                 }
 
@@ -491,7 +494,8 @@ const loanAmount =
                                 border
                                 border-gray-200
                                 bg-white
-                                p-4
+                                p-3
+                                md:p-4
                                 outline-none
                                 "
 
@@ -537,7 +541,7 @@ const loanAmount =
                             mt-6
                             text-sm
                             font-semibold
-                            text-gray-700
+                            text-gray-800
                             ">
 
                                 Property Price
@@ -551,7 +555,7 @@ const loanAmount =
 
                                 value={propertyPrice}
 
-                                onChange={(e)=>
+                                onChange={(e) =>
                                     setPropertyPrice(
                                         Number(e.target.value)
                                     )
@@ -564,7 +568,8 @@ const loanAmount =
                                 rounded-2xl
                                 border
                                 border-gray-200
-                                p-4
+                                p-3
+md:p-4
                                 "
 
                             />
@@ -583,7 +588,7 @@ const loanAmount =
                             mt-6
                             text-sm
                             font-semibold
-                            text-gray-700
+                            text-gray-800
                             ">
 
                                 Down Payment
@@ -597,7 +602,8 @@ const loanAmount =
                                 rounded-2xl
                                 bg-white
                                 border
-                                p-4
+                                p-3
+md:p-4
                                 text-gray-700
                                 "
                             >
@@ -620,7 +626,7 @@ const loanAmount =
                             mt-6
                             text-sm
                             font-semibold
-                            text-gray-700
+                            text-gray-800
                             ">
 
                                 Interest Rate
@@ -634,7 +640,8 @@ const loanAmount =
                                 rounded-2xl
                                 bg-white
                                 border
-                                p-4
+                                p-3
+md:p-4
                                 text-[#0e847b]
                                 font-bold
                                 "
@@ -658,7 +665,7 @@ const loanAmount =
                             mt-6
                             text-sm
                             font-semibold
-                            text-gray-700
+                            text-gray-800
                             ">
 
                                 Loan Tenure: {years} Years
@@ -676,7 +683,7 @@ const loanAmount =
 
                                 value={years}
 
-                                onChange={(e)=>
+                                onChange={(e) =>
                                     setYears(
                                         Number(e.target.value)
                                     )
@@ -710,7 +717,8 @@ const loanAmount =
                             overflow-hidden
                             rounded-[35px]
                             bg-[#0b1f1d]
-                            p-10
+                            p-6
+md:p-10
                             text-white
                             "
                         >
@@ -752,7 +760,9 @@ const loanAmount =
                                 <h2
                                     className="
                                     mt-6
-                                    text-5xl
+                                    text-3xl
+md:text-5xl
+break-words
                                     font-bold
                                     text-[#14b8a6]
                                     "
@@ -777,7 +787,11 @@ const loanAmount =
                                     <div
                                         className="
                                         flex
-                                        justify-between
+flex-col
+sm:flex-row
+gap-2
+sm:gap-0
+justify-between
                                         border-b
                                         border-white/10
                                         pb-4
@@ -864,7 +878,7 @@ const loanAmount =
                                         </span>
 
 
-                                        <strong className="text-right">
+                                        <strong className="text-left sm:text-right break-words">
                                             {mortgageType}
                                         </strong>
 
@@ -881,19 +895,26 @@ const loanAmount =
 
                                 <button
                                     className="
-                                    mt-12
+                                    mt-10
+                                    md:mt-12
+                                    w-full
+                                    sm:w-auto
                                     rounded-full
                                     bg-white
-                                    px-8
-                                    py-4
-                                    font-semibold
-                                    text-[#0e847b]
-                                    transition
-                                    hover:scale-105
+                                    text-black
+                                    cursor-pointer
+                                    px-6
+                                    md:px-8
+                                    py-3
+                                    md:py-4
+                                    text-sm
+                                    md:text-base
                                     "
                                 >
-
+                                    <a href="tel:+971542117385"
+>
                                     Apply For Mortgage →
+                                    </a>
 
                                 </button>
 

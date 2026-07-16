@@ -108,7 +108,7 @@ export default function AboutPage() {
                     <div>
 
 
-                        <h2 className="text-2xl md:text-3xl font-bold">
+                        <h2 className="text-2xl md:text-3xl font-bold text-black">
                             Who Are We
                         </h2>
 

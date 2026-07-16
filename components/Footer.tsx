@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <section className="relative bg-[#f8fbfb] text-white overflow-hidden">
+        <section className="relative bg-[#f8fbfb] text-white overflow-hidden w-full">
 
             {/* Background Glow */}
             <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-[#0e847b]/20 blur-3xl" />
@@ -196,22 +196,22 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="
-        inline-flex
-        items-center
-        justify-center
-        rounded-full
-        bg-[#0e847b]
-        px-8
-        py-4
-        text-sm
-        md:text-base
-        font-semibold
-        text-white
-        shadow-lg
-        transition-all
-        duration-300
-        hover:scale-105
-        hover:bg-[#0a6b63]
+                                inline-flex
+                                items-center
+                                justify-center
+                                rounded-full
+                                bg-[#0e847b]
+                                px-8
+                                py-4
+                                text-sm
+                                md:text-base
+                                font-semibold
+                                text-white
+                                shadow-lg
+                                transition-all
+                                duration-300
+                                hover:scale-105
+                                hover:bg-[#0a6b63]
     "
                     >
                         Book Free Consultation

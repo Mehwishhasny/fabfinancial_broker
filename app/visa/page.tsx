@@ -9,17 +9,10 @@ export default function GoldenVisa() {
         <>
             <Sidebar />
 
-            <section className="relative overflow-hidden py-28">
+            <section className="relative overflow-hidden py-20 md:py-28 px-4 md:px-0">
 
                 {/* Background Image */}
                 <div className="absolute inset-0">
-
-                    <Image
-                        src="/images/goldenvisa.webp"
-                        alt="UAE Golden Visa"
-                        fill
-                        className="object-cover opacity-20"
-                    />
 
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60" />
@@ -33,7 +26,24 @@ export default function GoldenVisa() {
 
 
 
-                <div className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-16 px-8 ml-40">
+                <div
+                    className="
+                    relative
+                    z-10
+                    mx-auto
+                    flex
+                    flex-col
+                    lg:flex-row
+                    items-center
+                    justify-between
+                    gap-12
+                    lg:gap-16
+                    px-4
+                    md:px-8
+                    ml-0
+                    lg:ml-40
+                    "
+>
 
                     {/* LEFT */}
 
@@ -43,7 +53,7 @@ export default function GoldenVisa() {
                             UAE Golden Visa
                         </p>
 
-                        <h1 className="mt-6 text-6xl font-bold leading-tight text-gray-900">
+                        <h1 className="mt-6 text-3xl md:text-6xl font-bold leading-tight text-gray-900">
 
                             Build Your Future
                             <span className="block text-[#0e847b]">
@@ -52,7 +62,7 @@ export default function GoldenVisa() {
 
                         </h1>
 
-                        <p className="mt-8 text-lg leading-8 text-gray-600">
+                        <p className="mt-8 text-base md:text-lg leading-7 md:leading-8 text-gray-600">
 
                             Secure your future with the UAE Golden Visa.
                             Whether you're an investor, entrepreneur, skilled
@@ -65,22 +75,22 @@ export default function GoldenVisa() {
 
                         {/* Buttons */}
 
-                        <div className="mt-10 flex gap-5">
+                        <div className="mt-8 flex flex-col sm:flex-row gap-4">
 
                             <a
                                 href="/contact"
                                 className="
-                    rounded-full
-                    bg-[#0e847b]
-                    px-8
-                    py-4
-                    text-white
-                    font-semibold
-                    transition
-                    duration-300
-                    hover:-translate-y-1
-                    hover:shadow-xl
-                    "
+                                    rounded-full
+                                    bg-[#0e847b]
+                                    px-8
+                                    py-4
+                                    text-white
+                                    font-semibold
+                                    transition
+                                    duration-300
+                                    hover:-translate-y-1
+                                    hover:shadow-xl
+                                    "
                             >
                                 Apply Now
                             </a>
@@ -110,7 +120,7 @@ export default function GoldenVisa() {
 
                         {/* Stats */}
 
-                        <div className="mt-16 flex gap-12">
+                        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center sm:text-left">
 
                             <div>
 
@@ -177,7 +187,7 @@ export default function GoldenVisa() {
                         >
 
                             <Image
-                                src="/images/goldenvisa-card.jpg"
+                                src="/images/goldenvisa.webp"
                                 alt="Golden Visa"
                                 width={380}
                                 height={450}
@@ -190,7 +200,7 @@ export default function GoldenVisa() {
                                     Your Journey Starts Here
                                 </h3>
 
-                                <p className="mt-3 leading-7 text-gray-600">
+                                <p className="mt-3 leading-7 text-gray-800">
                                     From eligibility assessment to document preparation
                                     and application submission, FAB manages the entire
                                     process so you can focus on your future.
@@ -208,14 +218,13 @@ export default function GoldenVisa() {
 
             {/* Why Choose Golden Visa */}
             <section className="
-    relative
-    overflow-hidden
-    bg-[#f8fbfb]
-    ml-35
-    mx-10
-    py-24
-    rounded-[40px]
-">
+                    relative
+                    overflow-hidden
+                    bg-[#f8fbfb]
+                    mx-4 md:mx-10 lg:ml-35
+                    py-24
+                    rounded-[25px] md:rounded-[40px]
+                ">
 
 
                 {/* Background Shapes */}
@@ -268,7 +277,7 @@ export default function GoldenVisa() {
 
                         <h2 className="
                 mt-5
-                text-4xl
+                text-2xl md:text-4xl
                 font-bold
                 text-gray-900
             ">
@@ -280,7 +289,7 @@ export default function GoldenVisa() {
                 mx-auto
                 mt-6
                 max-w-3xl
-                text-lg
+                text-base md:text-lg
                 leading-8
                 text-gray-600
             ">
@@ -337,7 +346,7 @@ export default function GoldenVisa() {
                     overflow-hidden
                     rounded-[35px]
                     bg-white
-                    p-10
+                    p-6 md:p-10
                     shadow-lg
                     border
                     border-gray-100
@@ -385,7 +394,7 @@ export default function GoldenVisa() {
 
                                     <h3 className="
                         mt-8
-                        text-2xl
+                        text-xl md:text-2xl
                         font-bold
                         text-gray-900
                     ">
@@ -434,7 +443,7 @@ export default function GoldenVisa() {
                 <div className="absolute -left-40 top-10 h-96 w-96 rounded-full bg-[#0e847b]/10 blur-3xl" />
                 <div className="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-yellow-300/10 blur-3xl" />
 
-                <div className="relative mx-auto max-w-6xl px-8 ml-25">
+                <div className="relative mx-auto max-w-6xl px-4 md:px-8 ml-0 lg:ml-25">
 
                     {/* Heading */}
 
@@ -444,11 +453,11 @@ export default function GoldenVisa() {
                             Eligibility
                         </p>
 
-                        <h2 className="mt-4 text-3xl font-bold text-gray-900">
+                        <h2 className="mt-4 text-2xl md:text-3xl font-bold text-gray-900">
                             Who Is Eligible?
                         </h2>
 
-                        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-600">
+                        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-700">
                             The UAE Golden Visa is available for investors, professionals,
                             entrepreneurs, and exceptional individuals who contribute to
                             the country's growth and development.
@@ -498,7 +507,7 @@ export default function GoldenVisa() {
                     bg-white
                     border
                     border-[#0e847b]/10
-                    p-8
+                    p-6 md:p-8
                     shadow-lg
                     transition-all
                     duration-500
@@ -549,13 +558,11 @@ export default function GoldenVisa() {
                                     <div
                                         className="
                             flex
-                            h-16
-                            w-16
+                            h-14 w-14 md:h-16 md:w-16 text-2xl md:text-3xl
                             items-center
                             justify-center
                             rounded-2xl
                             bg-[#0e847b]/10
-                            text-3xl
                             transition-all
                             duration-500
                             group-hover:rotate-6
@@ -565,11 +572,11 @@ export default function GoldenVisa() {
                                         {item.icon}
                                     </div>
 
-                                    <h3 className="mt-8 text-2xl font-bold text-gray-900">
+                                    <h3 className="mt-8 text-xl md:text-2xl font-bold text-gray-900">
                                         {item.title}
                                     </h3>
 
-                                    <p className="mt-5 leading-8 text-gray-600">
+                                    <p className="mt-5 leading-7 md:leading-8 text-gray-600">
                                         {item.desc}
                                     </p>
 
@@ -588,7 +595,7 @@ export default function GoldenVisa() {
 
             {/* REQUIRED DOCUMENTS */}
 
-            <section className="relative overflow-hidden bg-[#0b1f1d] ml-35 mx-10 rounded-[40px] py-24 text-white">
+            <section className="relative overflow-hidden bg-[#0b1f1d] mx-4 md:mx-10 lg:ml-35 rounded-[40px] py-24 text-white">
 
                 <div className="absolute -top-40 right-0 h-96 w-96 rounded-full bg-[#0e847b]/20 blur-3xl" />
 
@@ -600,7 +607,7 @@ export default function GoldenVisa() {
                             Documentation
                         </p>
 
-                        <h2 className="mt-5 text-5xl font-bold">
+                        <h2 className="mt-5 text-2xl md:text-5xl font-bold">
                             Required Documents
                         </h2>
 
@@ -634,7 +641,7 @@ export default function GoldenVisa() {
                     gap-5
                     rounded-3xl
                     bg-white/40
-                    p-6
+                    p-4 md:p-6
                     backdrop-blur-xl
                     transition
                     duration-500
@@ -652,12 +659,12 @@ export default function GoldenVisa() {
                     rounded-full
                     bg-[#0e847b]
                     font-bold
-                    text-xl
+                    text-base md:text-lg
                     ">
                                     ✓
                                 </div>
 
-                                <h3 className="text-lg font-semibold">
+                                <h3 className="text-base md:text-lg font-semibold">
                                     {item}
                                 </h3>
 
@@ -681,8 +688,7 @@ export default function GoldenVisa() {
     overflow-hidden
     bg-[#f8fbfb]
     py-24
-    ml-35
-    mx-10
+  mx-4 md:mx-10 lg:ml-35
     rounded-[40px]
     mt-10
 ">
@@ -703,7 +709,7 @@ font-semibold
 
                         <h2 className="
 mt-5
-text-4xl
+text-2xl md:text-4xl
 font-bold
 text-gray-900
 ">
@@ -720,16 +726,16 @@ text-gray-900
                         {/* Center Line */}
 
                         <div className="
-absolute
-left-1/2
-top-0
-hidden
-h-full
-w-[3px]
--translate-x-1/2
-bg-[#0e847b]/20
-md:block
-"/>
+                                absolute
+                                left-1/2
+                                top-0
+                                hidden
+                                h-full
+                                w-[3px]
+                                -translate-x-1/2
+                                bg-[#0e847b]/20
+                                md:block
+                                "/>
 
 
 
@@ -765,13 +771,13 @@ md:block
                             <div
                                 key={index}
                                 className={`
-relative
-mb-20
-flex
-items-center
-gap-10
+                                        relative
+                                        mb-20
+                                        flex
+                                        items-center
+                                        gap-6 md:gap-10
 
-${index % 2 === 0
+                                        ${index % 2 === 0
                                         ? "md:flex-row"
                                         : "md:flex-row-reverse"
                                     }
@@ -783,31 +789,33 @@ ${index % 2 === 0
                                 {/* ICON SIDE */}
 
                                 <div className="
-hidden
-md:flex
-w-1/2
-justify-center
-">
+                                    flex md:flex
+                                    w-1/2
+                                    justify-center
+                                    ">
 
 
                                     <div className="
-flex
-h-36
-w-36
-items-center
-justify-center
-rounded-full
-bg-white
-border-2
-border-[#0e847b]/20
-text-6xl
-shadow-xl
-transition-all
-duration-500
-hover:scale-110
-hover:shadow-2xl
-hover:border-[#0e847b]
-">
+                                        flex
+                                        h-20
+                                        w-20
+                                        md:h-36
+                                        md:w-36
+                                        text-3xl
+                                        md:text-6xl
+                                        items-center
+                                        justify-center
+                                        rounded-full
+                                        bg-white
+                                        border-2
+                                        border-[#0e847b]/20
+                                        shadow-xl
+                                        transition-all
+                                        duration-500
+                                        hover:scale-110
+                                        hover:shadow-2xl
+                                        hover:border-[#0e847b]
+                                        ">
                                         {item.icon}
                                     </div>
 
@@ -862,7 +870,7 @@ md:w-1/2
 group
 rounded-[35px]
 bg-white
-p-8
+p-6 md:p-8
 shadow-lg
 border
 border-gray-100
@@ -886,7 +894,7 @@ text-[#0e847b]
 
                                         <h3 className="
 mt-4
-text-2xl
+text-xl md:text-2xl
 font-bold
 text-gray-900
 ">
@@ -944,8 +952,7 @@ group-hover:w-full
     relative
     overflow-hidden
     bg-[#0b1f1d]
-    ml-35
-    mx-10
+    mx-4 md:mx-10 lg:ml-35
     my-5
     rounded-[40px]
     py-18
@@ -1162,8 +1169,7 @@ group-hover:w-full
         <h2
             className="
             mt-2
-            text-2xl
-            md:text-2xl
+           text-2xl md:text-4xl
             font-bold
         "
         >
@@ -1241,8 +1247,7 @@ group-hover:w-full
             inline-flex
             rounded-full
             bg-[#14b8a6]
-            px-10
-            py-4
+            px-8 md:px-10 py-3 md:py-4
             font-semibold
             text-white
             shadow-xl

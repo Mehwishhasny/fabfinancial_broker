@@ -17,14 +17,6 @@ export default function ContactPage() {
 
       <section className="relative overflow-hidden py-20 md:py-28 md:ml-40 px-5 md:px-0">
 
-        {/* Background Image */}
-        <Image
-          src="/images/contact-hero.jpg"
-          alt="Contact FAB"
-          fill
-          className="object-cover opacity-15"
-        />
-
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60" />
 
@@ -69,9 +61,9 @@ export default function ContactPage() {
               </p>
 
               <button className="
-mt-8
-w-full
-md:w-auto
+                    mt-8
+                    w-full
+                    md:w-auto
                   rounded-full
                   bg-[#0e847b]
                   px-8
@@ -83,7 +75,7 @@ md:w-auto
                   hover:bg-[#0b6d65]
                 "
               >
-                Schedule Consultation
+                Schedule a Consultation
               </button>
 
             </div>
@@ -93,7 +85,7 @@ md:w-auto
             <div className="relative flex justify-center">
 
               <Image
-                src="/images/contact-team.jpg"
+                src="/images/contactbg.jpg"
                 alt="contact"
                 width={520}
                 height={650}
@@ -106,10 +98,10 @@ md:w-auto
               <div
                 className="
                   absolute
-right-4
-bottom-4
-md:-right-10
-md:-bottom-8
+                  right-4
+                  bottom-4
+                  md:-right-7
+                  md:-bottom-8
                   rounded-3xl
                   bg-white
                   p-4
@@ -125,8 +117,11 @@ md:-bottom-8
                   Call Anytime
                 </p>
 
-                <h3 className="mt-1 font-bold">
-                  +971 54 232 1423
+                <h3 className="mt-1 font-bold text-black">
+                  <a
+                    href="tel:+971542321423">
+                    +971 54 232 1423
+                  </a>
                 </h3>
 
               </div>
@@ -164,97 +159,102 @@ md:-bottom-8
             </p>
 
           </div>
-<div className="mt-12 md:mt-16 grid gap-6 md:gap-8 lg:grid-cols-3">
+          <div className="mt-12 md:mt-16 grid gap-6 md:gap-8 lg:grid-cols-3">
 
             {/* CARD */}
-
             {[
               {
                 icon: <Phone size={34} />,
                 title: "Call Us",
                 value: "+971 54 232 1423",
                 desc: "Mon - Sat | 9 AM - 9 PM",
+                href: "tel:+971542321423",
+              },
+                  {
+                icon: <MapPin size={34} />,
+                title: "Office",
+                value:
+                  "Office 1104, Al Fattan Office Tower, Business Hub, Dubai Marina P.O. Box 48395",
+                desc: "Dubai, UAE",
+                href:
+                  "https://www.google.com/maps/search/?api=1&query=Office+1104,+Al+Fattan+Office+Tower,+Business+Hub,+Dubai+Marina,+Dubai,+UAE",
               },
               {
                 icon: <Mail size={34} />,
                 title: "Email",
                 value: "fabfinancialbroker@gmail.com",
                 desc: "Response within 24 hours",
+                href: "mailto:fabfinancialbroker@gmail.com",
               },
-              {
-                icon: <MapPin size={34} />,
-                title: "Office",
-                value: "Office 1104, Al Fattan Office Tower, Business Hub, Dubai Marina P.O. Box 48395",
-                desc: "Dubai, UAE",
-              },
-
+          
             ].map((item, index) => (
-
-              <div
+              <a
                 key={index}
-                className="
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-[35px]
-                  bg-white
-                  p-6 
-                  md:p-8
-                  shadow-lg
-                  transition-all
-                  duration-500
-                  hover:-translate-y-4
-                  hover:shadow-2xl
-                "
+                href={item.href}
+                target={item.title === "Office" ? "_blank" : undefined}
+                rel={item.title === "Office" ? "noopener noreferrer" : undefined}
+                className="block"
               >
-
                 <div
                   className="
-                    flex
-                 h-14
-w-14
-md:h-16
-md:w-16
-                    items-center
-                    justify-center
-                    rounded-2xl
-                    bg-[#0e847b]/10
-                    text-[#0e847b]
-                    transition
-                    duration-500
-                    group-hover:scale-110
-                    group-hover:rotate-6
-                  "
+        group
+        relative
+        overflow-hidden
+        rounded-[35px]
+        bg-white
+        p-6
+        md:p-8
+        shadow-lg
+        transition-all
+        duration-500
+        hover:-translate-y-4
+        hover:shadow-2xl
+        cursor-pointer
+      "
                 >
-                  {item.icon}
+                  <div
+                    className="
+          flex
+          h-16
+          w-16
+          items-center
+          justify-center
+          rounded-2xl
+          bg-[#0e847b]/10
+          text-[#0e847b]
+          transition
+          duration-500
+          group-hover:scale-110
+          group-hover:rotate-6
+        "
+                  >
+                    {item.icon}
+                  </div>
+
+                  <h3 className="mt-8 text-2xl font-bold">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-5 font-semibold text-[#0e847b] break-words">
+                    {item.value}
+                  </p>
+
+                  <p className="mt-3 leading-7 text-gray-600">
+                    {item.desc}
+                  </p>
+
+                  <ArrowRight
+                    className="
+          mt-8
+          text-[#0e847b]
+          transition
+          duration-500
+          group-hover:translate-x-2
+        "
+                  />
                 </div>
-
-                <h3 className="mt-8 text-xl md:text-2xl font-bold">
-                  {item.title}
-                </h3>
-
-                <p className="mt-5 font-semibold text-[#0e847b]">
-                  {item.value}
-                </p>
-
-                <p className="mt-3 leading-7 text-gray-600">
-                  {item.desc}
-                </p>
-
-                <ArrowRight
-                  className="
-                    mt-8
-                    text-[#0e847b]
-                    transition
-                    duration-500
-                    group-hover:translate-x-2
-                  "
-                />
-
-              </div>
-
+              </a>
             ))}
-
           </div>
 
         </div>
@@ -284,13 +284,13 @@ md:w-16
                 Send a Message
               </p>
 
-              <h2 className="mt-5 text-3xl md:text-5xl font-bold">
+              <h2 className="mt-5 text-3xl md:text-5xl font-bold text-black">
                 Let's Talk About
                 <br />
                 Your Goals
               </h2>
 
-              <p className="mt-6 max-w-xl text-base md:text-lg leading-7 md:leading-8">
+              <p className="mt-6 max-w-xl text-base md:text-lg leading-7 md:leading-8 text-gray-800">
                 Fill in the form below and one of our financial
                 specialists will contact you shortly.
               </p>
@@ -305,7 +305,7 @@ md:w-16
 
                     <div>
 
-                      <label className="mb-2 block font-medium text-gray-700">
+                      <label className="mb-2 block font-medium text-gray-800">
                         Full Name
                       </label>
 
@@ -331,7 +331,7 @@ md:w-16
 
                       <div>
 
-                        <label className="mb-2 block font-medium text-gray-700">
+                        <label className="mb-2 block font-medium text-gray-800">
                           Email
                         </label>
 
@@ -354,7 +354,7 @@ md:w-16
 
                       <div>
 
-                        <label className="mb-2 block font-medium text-gray-700">
+                        <label className="mb-2 block font-medium text-gray-800">
                           Phone
                         </label>
 
@@ -379,7 +379,7 @@ md:w-16
 
                     <div>
 
-                      <label className="mb-2 block font-medium text-gray-700">
+                      <label className="mb-2 block font-medium text-gray-800">
                         Service
                       </label>
 
@@ -407,7 +407,7 @@ md:w-16
 
                     <div>
 
-                      <label className="mb-2 block font-medium text-gray-700">
+                      <label className="mb-2 block font-medium text-gray-800">
                         Message
                       </label>
 
@@ -430,7 +430,7 @@ md:w-16
                     </div>
 
                     <button
-                   className="
+                      className="
                         group
                         flex
                         w-full
@@ -449,7 +449,9 @@ md:w-16
                         hover:bg-[#0b6d65]
                       "
                     >
-                      Send Message
+                      <a href="mailto:fabfinancialbroker@gmail.com">
+                        Send Message
+                      </a>
 
                       <ArrowRight
                         className="
