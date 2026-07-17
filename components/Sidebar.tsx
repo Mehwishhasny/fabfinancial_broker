@@ -3,12 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  Aperture,
-  Fingerprint,
-  Orbit,
-  Calculator,
-  MessageSquareText,
-  Crown,
+    Aperture,
+    Fingerprint,
+    Orbit,
+    Calculator,
+    MessageSquareText,
+    Crown,
 } from "lucide-react";
 
 const menuItems = [
@@ -48,13 +48,15 @@ export default function Sidebar() {
         >
             {/* Logo */}
             <div className="flex items-center md:justify-center md:px-2 md:py-4">
-                <Image
-                    src="/images/logo.jpeg"
-                    alt="FAB"
-                    width={136}
-                    height={140}
-                    className="object-contain w-24 h-auto md:w-[136px]"
-                />
+                <a href="/">
+                    <Image
+                        src="/images/logo.jpeg"
+                        alt="FAB"
+                        width={140}
+                        height={150}
+                        className="object-contain w-30 h-auto md:w-[140px]"
+                    />
+                </a>
             </div>
 
             {/* Menu */}
@@ -74,10 +76,10 @@ export default function Sidebar() {
                     md:mt-2
                     md:w-1/2
                     md:flex-col
-                    md:gap-2
+                    md:gap-6
                     md:rounded-[40px]
                     md:px-0
-                    md:py-0
+                    md:py-4
                     lg:top-0
                 "
             >
@@ -85,66 +87,55 @@ export default function Sidebar() {
                     const Icon = item.icon;
 
                     return (
-                        <Link
-                            key={item.label}
-                            href={item.href}
-                            className="
-                                group
-                                relative
-                                flex
-                                items-center
-                                justify-center
+                <Link
+    key={item.label}
+    href={item.href}
+    className="
+        group
+        flex
+        flex-col
+        md:flex-row
+        items-center
+        justify-center
 
-                                w-10
-                                h-10
+        w-12
+        md:w-14
+        h-auto
+        py-1
 
-                                md:w-14
-                                md:h-14
+        rounded-full
+        transition-all
+        duration-300
+        hover:bg-slate-900
+    "
+>
+    <Icon className="w-6 h-6 md:w-6 md:h-6 text-white" />
 
-                                rounded-full
-                                transition-all
-                                duration-300
+    <span className="mt-1 text-[6px] text-white md:hidden">
+        {item.label}
+    </span>
 
-                                hover:bg-slate-900
-                                hover:text-white
-                            "
-                        >
-                            <Icon className="w-4 h-4 md:w-6 md:h-6 text-white opacity-60 blur-5" />
-
-                            {/* Tooltip (Desktop Only) */}
-                            <span
-                                className="
-                                    hidden
-                                    md:block
-
-                                    absolute
-                                    left-16
-
-                                    px-3
-                                    py-1
-
-                                    rounded-full
-                                    bg-slate-900
-                                    text-white
-                                    text-xs
-
-                                    whitespace-nowrap
-
-                                    opacity-0
-                                    -translate-x-2
-
-                                    group-hover:opacity-100
-                                    group-hover:translate-x-0
-
-                                    transition-all
-                                    duration-300
-                                    pointer-events-none
-                                    shadow-xl
-                                "
-                            >
-                                {item.label}
-                            </span>
-                        </Link>
+    <span
+        className="
+            hidden md:block
+            absolute left-16
+            px-3 py-1
+            md:px-5
+            rounded-full
+            bg-slate-900
+            text-white text-xs
+            md:text-base
+            whitespace-nowrap
+            opacity-0
+            -translate-x-2
+            group-hover:opacity-100
+            group-hover:translate-x-0
+            transition-all
+        "
+    >
+        {item.label}
+    </span>
+</Link>
                     );
                 })}
             </nav>

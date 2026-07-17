@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Sidebar from "@/components/Sidebar";
+import Link from "next/link";
 
 export default function ServicesPage() {
 
@@ -10,24 +11,35 @@ export default function ServicesPage() {
         {
             title: "Mortgages",
             image: "/images/mortgage.jpg",
+            link: "/services/mortgages",
             desc:
                 "Find the right mortgage solution with competitive rates from trusted UAE banks. We guide you through eligibility, approval, and documentation."
         },
         {
             title: "Business Finance",
             image: "/images/bfinance.jpg",
+            link: "/services/businessfinance",
             desc:
                 "Flexible business financing solutions designed to support growth, working capital needs, and expansion plans."
         },
         {
             title: "UAE Golden Visa",
             image: "/images/goldenvisa.webp",
+            link: "/services/goldenvisa",
             desc:
                 "Professional guidance for investors and individuals seeking UAE Golden Visa solutions through eligible investments."
         },
         {
             title: "Financial Advisory",
             image: "/images/fadvise.jpg",
+            link: "/services/financialadvise",
+            desc:
+                "Strategic financial advice to help you make informed borrowing, investment, and planning decisions."
+        },
+        {
+            title: "Resident's Support",
+            image: "/images/resident.jpg",
+            link: "/services/residentssupport",
             desc:
                 "Strategic financial advice to help you make informed borrowing, investment, and planning decisions."
         }
@@ -43,51 +55,112 @@ export default function ServicesPage() {
 
             {/* HERO */}
 
-            <section className="relative overflow-hidden py-20 md:py-28 px-4 md:px-8">
+           <section className="relative overflow-hidden py-20 md:py-28 px-4 md:px-8">
 
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60" />
-
-
-
-                {/* Decorative Blurs */}
-                <div className="absolute -top-24 right-0 h-96 w-96 rounded-full bg-yellow-400/20 blur-3xl" />
-
-                <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#0e847b]/10 blur-3xl" />
-
+    {/* Background Image */}
+    <Image
+        src="/images/servicebg.jpg"
+        alt="Financial Services Background"
+        fill
+        priority
+        className="object-cover"
+    />
 
 
-                <div className="relative z-10 ml-0 md:ml-40 max-w-6xl text-center md:text-left">
+    {/* Dark/White Overlay */}
+    <div className="
+        absolute
+        inset-0
+        bg-gradient-to-r
+        from-white
+        via-white/90
+        to-white/60
+    "/>
 
 
-                    <p className="
-                    uppercase
-                    tracking-[0.4em]
-                    text-[#0e847b]
-                    font-semibold
-                    ">
-                        Our Services
-                    </p>
+    {/* Decorative Blurs */}
+    <div className="
+        absolute
+        -top-24
+        right-0
+        h-96
+        w-96
+        rounded-full
+        bg-yellow-400/20
+        blur-3xl
+    "/>
 
 
-                    <h1 className="mt-6 text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-                        Financial Solutions
-                        <br />
-                        Designed Around You
-                    </h1>
+    <div className="
+        absolute
+        bottom-0
+        left-0
+        h-80
+        w-80
+        rounded-full
+        bg-[#0e847b]/10
+        blur-3xl
+    "/>
 
 
-                    <p className="mt-6 max-w-3xl mx-auto md:mx-0 text-base md:text-lg leading-7 md:leading-8 text-gray-600">
-                        From home financing to business growth,
-                        FAB provides expert financial solutions
-                        built around your goals.
-                    </p>
+
+    {/* Content */}
+    <div className="
+        relative
+        z-10
+        ml-0
+        md:ml-40
+        max-w-6xl
+        text-center
+        md:text-left
+    ">
 
 
-                </div>
+        <p className="
+            uppercase
+            tracking-[0.4em]
+            text-[#0e847b]
+            font-semibold
+        ">
+            Our Services
+        </p>
 
 
-            </section>
+        <h1 className="
+            mt-6
+            text-3xl
+            md:text-5xl
+            font-bold
+            text-gray-900
+            leading-tight
+        ">
+            Financial Solutions
+            <br />
+            Designed Around You
+        </h1>
+
+
+        <p className="
+            mt-6
+            max-w-3xl
+            mx-auto
+            md:mx-0
+            text-base
+            md:text-lg
+            leading-7
+            md:leading-8
+            text-gray-600
+        ">
+            From home financing to business growth,
+            FAB provides expert financial solutions
+            built around your goals.
+        </p>
+
+
+    </div>
+
+
+</section>
 
 
 
@@ -172,17 +245,23 @@ export default function ServicesPage() {
 
 
 
-                                    <button className="
-                                    mt-8
-                                    rounded-full
-                                    bg-[#0e847b]
-                                    px-6
-                                    py-3
-                                    text-white
-                                    transition
-                                    hover:bg-[#095f59]
-                                    ">
-                                        Learn More →
+                                    <button>
+                                        <Link
+                                            href={service.link}
+                                            className="
+                                            mt-8
+                                            inline-flex
+                                            rounded-full
+                                            bg-[#0e847b]
+                                            px-6
+                                            py-3
+                                            text-white
+                                            transition
+                                            hover:bg-[#095f59]
+                                            "
+                                        >
+                                            Learn More →
+                                        </Link>
                                     </button>
 
 

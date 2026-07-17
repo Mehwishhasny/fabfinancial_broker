@@ -16,6 +16,8 @@ export default function Footer() {
                 className="
                     relative
                     mx-auto
+                    md:mx-20
+                    lg:mx-20
                     w-full
                     max-w-6xl
                     px-5
@@ -31,7 +33,7 @@ export default function Footer() {
                 <div
                     className="
                         grid
-                        grid-cols-1
+                        grid-cols-2
                         sm:grid-cols-3
                         lg:grid-cols-4
                         gap-10
@@ -44,6 +46,7 @@ export default function Footer() {
                     {/* LOGO */}
                     <div className="space-y-5 flex flex-col items-center sm:items-start">
 
+                    <a href="/">
                         <Image
                             src="/images/logo.jpeg"
                             alt="FAB"
@@ -51,6 +54,7 @@ export default function Footer() {
                             height={170}
                             className="object-contain"
                         />
+                    </a>
 
                         <p className="text-gray-600 leading-7 text-sm max-w-xs">
                             Secure and smarter financial solutions across the UAE

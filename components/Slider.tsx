@@ -23,7 +23,7 @@ export default function ImageSlider() {
                 px-6
                 lg:px-20
                 mx-6
-                lg:ml-70
+                lg:ml-50
                 bg-transparent
             "
         >

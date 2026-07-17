@@ -17,35 +17,35 @@ export default function BlueprintHero() {
     const testimonials = [
         {
             quote:
-                "The team guided us through every step of buying our first home. The mortgage process felt simple and transparent.",
+                "Buying our first home felt overwhelming, but the team explained everything clearly and made the entire mortgage process much less stressful.",
             name: "Anna D'Cruz",
             role: "First-time Home Buyer",
             initials: "AD",
         },
         {
             quote:
-                "The team guided us through every step of buying our first home. The mortgage process felt simple and transparent.",
+                "From our first consultation to the final approval, everything was handled professionally. They were always available to answer our questions.",
             name: "Emily Carter",
             role: "Project Manager",
             initials: "EC",
         },
         {
             quote:
-                "The team guided us through every step of buying our first home. The mortgage process felt simple and transparent.",
+                "I was surprised by how quickly everything moved. The team kept me informed at every stage, and the whole experience was smooth from start to finish.",
             name: "Arnest John",
             role: "Home Owner",
             initials: "AJ",
         },
         {
             quote:
-                "Their mortgage advice helped us choose the right plan and save money in the long run. Highly recommended.",
+                "Their advice helped me compare different mortgage options and choose the one that suited my budget. I couldn't be happier with the outcome.",
             name: "Sarah Khan",
             role: "Property Investor",
             initials: "SK",
         },
         {
             quote:
-                "Fast responses, expert guidance, and a smooth approval process. We finally found confidence to purchase our dream home.",
+                "Excellent service from beginning to end. The application process was straightforward, communication was great, and we received our approval faster than expected.",
             name: "Ron Bart",
             role: "Home Owner",
             initials: "RB",
@@ -423,7 +423,7 @@ export default function BlueprintHero() {
 
                 </div>
 
-             
+
 
                 {/* RIGHT CONTENT */}
 
@@ -777,10 +777,10 @@ export default function BlueprintHero() {
 
 
 
-{/* About */}
-<section
-    id="about"
-    className="
+            {/* About */}
+            <section
+                id="about"
+                className="
     relative
     min-h-screen
     overflow-hidden
@@ -792,12 +792,12 @@ export default function BlueprintHero() {
     py-16
     lg:py-0
     "
->
+            >
 
-    {/* Background Decorations */}
+                {/* Background Decorations */}
 
-    <div
-        className="
+                <div
+                    className="
         absolute
         -top-40
         -left-40
@@ -807,10 +807,10 @@ export default function BlueprintHero() {
         bg-[#0e847b]/10
         blur-3xl
         "
-    />
+                />
 
-    <div
-        className="
+                <div
+                    className="
         absolute
         bottom-0
         right-0
@@ -820,12 +820,12 @@ export default function BlueprintHero() {
         bg-yellow-300/10
         blur-3xl
         "
-    />
+                />
 
 
 
-    <div
-        className="
+                <div
+                    className="
         relative
         z-10
         mx-auto
@@ -840,14 +840,14 @@ export default function BlueprintHero() {
         gap-14
         lg:gap-20
         "
-    >
+                >
 
 
 
-        {/* LEFT IMAGE */}
+                    {/* LEFT IMAGE */}
 
-        <div
-            className="
+                    <div
+                        className="
             order-2
             lg:order-1
             relative
@@ -858,13 +858,13 @@ export default function BlueprintHero() {
             lg:max-w-none
             lg:ml-24
             "
-        >
+                    >
 
 
-            {/* Decorative Box */}
+                        {/* Decorative Box */}
 
-            <div
-                className="
+                        <div
+                            className="
                 absolute
                 -left-3
                 lg:-left-8
@@ -877,33 +877,33 @@ export default function BlueprintHero() {
                 border-2
                 border-[#0e847b]
                 "
-            />
+                        />
 
 
 
-            {/* Image */}
+                        {/* Image */}
 
-            <div
-                className="
+                        <div
+                            className="
                 relative
                 overflow-hidden
                 rounded-[30px]
                 lg:rounded-[40px]
                 shadow-2xl
                 "
-            >
+                        >
 
-                <Image
+                            <Image
 
-                    src="/images/about.jpg"
+                                src="/images/about.jpg"
 
-                    alt="About FAB"
+                                alt="About FAB"
 
-                    width={650}
+                                width={650}
 
-                    height={700}
+                                height={700}
 
-                    className="
+                                className="
                     h-[220px]
                     sm:h-[280px]
                     md:h-full
@@ -914,18 +914,18 @@ export default function BlueprintHero() {
                     hover:scale-105
                     "
 
-                />
+                            />
 
-            </div>
-
-
+                        </div>
 
 
 
-            {/* Floating Card */}
 
-            <div
-                className="
+
+                        {/* Floating Card */}
+
+                        <div
+                            className="
                 absolute
                 -bottom-6
                 lg:-bottom-12
@@ -938,41 +938,41 @@ export default function BlueprintHero() {
                 lg:p-8
                 shadow-2xl
                 "
-            >
+                        >
 
-                <h3
-                    className="
+                            <h3
+                                className="
                     text-sm
                     sm:text-base
                     lg:text-xl
                     font-bold
                     text-gray-800
                     "
-                >
+                            >
 
-                    Committed to
+                                Committed to
 
-                    <br />
+                                <br />
 
-                    Excellence
+                                Excellence
 
-                </h3>
-
-
-            </div>
+                            </h3>
 
 
-
-        </div>
+                        </div>
 
 
 
+                    </div>
 
 
-        {/* RIGHT CONTENT */}
 
-        <div
-            className="
+
+
+                    {/* RIGHT CONTENT */}
+
+                    <div
+                        className="
             order-1
             lg:order-2
             w-full
@@ -982,12 +982,12 @@ export default function BlueprintHero() {
             ml-0
             lg:ml-10
             "
-        >
+                    >
 
 
 
-            <p
-                className="
+                        <p
+                            className="
                 uppercase
                 tracking-[0.25em]
                 lg:tracking-[0.5em]
@@ -999,17 +999,17 @@ export default function BlueprintHero() {
                 text-sm
                 lg:text-base
                 "
-            >
+                        >
 
-                About <b>FAB</b>
+                            About <b>FAB</b>
 
-            </p>
-
-
+                        </p>
 
 
-            <h2
-                className="
+
+
+                        <h2
+                            className="
                 mt-5
                 lg:mt-8
                 text-2xl
@@ -1019,17 +1019,17 @@ export default function BlueprintHero() {
                 leading-tight
                 text-gray-900
                 "
-            >
+                        >
 
-                Trusted Financial Advisors in UAE
+                            Trusted Financial Advisors in UAE
 
-            </h2>
-
-
+                        </h2>
 
 
-            <p
-                className="
+
+
+                        <p
+                            className="
                 mt-5
                 lg:mt-6
                 text-sm
@@ -1042,20 +1042,20 @@ export default function BlueprintHero() {
                 mx-auto
                 lg:mx-0
                 "
-            >
+                        >
 
-                At <strong>Financial Broker (FAB)</strong>, we simplify complex
-                financial decisions with expert guidance, strategic planning,
-                and access to the UAE's leading banks and lenders.
+                            At <strong>Financial Broker (FAB)</strong>, we simplify complex
+                            financial decisions with expert guidance, strategic planning,
+                            and access to the UAE's leading banks and lenders.
 
-            </p>
-
-
+                        </p>
 
 
 
-            <p
-                className="
+
+
+                        <p
+                            className="
                 mt-4
                 lg:mt-6
                 text-sm
@@ -1069,22 +1069,22 @@ export default function BlueprintHero() {
                 mx-auto
                 lg:mx-0
                 "
-            >
+                        >
 
-                Whether you're purchasing your first home, expanding your
-                business, or planning long-term investments, we provide
-                transparent advice tailored to your goals.
+                            Whether you're purchasing your first home, expanding your
+                            business, or planning long-term investments, we provide
+                            transparent advice tailored to your goals.
 
-            </p>
-
-
+                        </p>
 
 
 
-            {/* Stats */}
 
-            <div
-                className="
+
+                        {/* Stats */}
+
+                        <div
+                            className="
                 grid
                 grid-cols-1
                 sm:grid-cols-2
@@ -1093,27 +1093,27 @@ export default function BlueprintHero() {
                 mt-8
                 lg:mt-12
                 "
-            >
+                        >
 
 
 
-                {/* Happy Clients */}
+                            {/* Happy Clients */}
 
-                <div
-                    className="
+                            <div
+                                className="
                     relative
                     overflow-hidden
                     rounded-3xl
                     p-[2px]
                     beam-card
                     "
-                >
+                            >
 
-                    <div className="beam absolute inset-0"></div>
+                                <div className="beam absolute inset-0"></div>
 
 
-                    <div
-                        className="
+                                <div
+                                    className="
                         relative
                         z-10
                         rounded-[22px]
@@ -1121,55 +1121,55 @@ export default function BlueprintHero() {
                         p-5
                         lg:p-6
                         "
-                    >
+                                >
 
-                        <h4
-                            className="
+                                    <h4
+                                        className="
                             text-3xl
                             lg:text-4xl
                             font-bold
                             text-[#0e847b]
                             "
-                        >
+                                    >
 
-                            500+
+                                        500+
 
-                        </h4>
-
-
-                        <p className="mt-2 text-gray-700 font-medium">
-
-                            Happy Clients
-
-                        </p>
+                                    </h4>
 
 
-                    </div>
+                                    <p className="mt-2 text-gray-700 font-medium">
+
+                                        Happy Clients
+
+                                    </p>
 
 
-                </div>
+                                </div>
 
 
+                            </div>
 
 
 
-                {/* Banking Partners */}
 
-                <div
-                    className="
+
+                            {/* Banking Partners */}
+
+                            <div
+                                className="
                     relative
                     overflow-hidden
                     rounded-3xl
                     p-[2px]
                     beam-card
                     "
-                >
+                            >
 
-                    <div className="beam absolute inset-0"></div>
+                                <div className="beam absolute inset-0"></div>
 
 
-                    <div
-                        className="
+                                <div
+                                    className="
                         relative
                         z-10
                         rounded-[22px]
@@ -1177,44 +1177,44 @@ export default function BlueprintHero() {
                         p-5
                         lg:p-6
                         "
-                    >
+                                >
 
-                        <h4
-                            className="
+                                    <h4
+                                        className="
                             text-3xl
                             lg:text-4xl
                             font-bold
                             text-[#0e847b]
                             "
-                        >
+                                    >
 
-                            10+
+                                        10+
 
-                        </h4>
-
-
-                        <p className="mt-2 text-gray-700 font-medium">
-
-                            Banking Partners
-
-                        </p>
+                                    </h4>
 
 
-                    </div>
+                                    <p className="mt-2 text-gray-700 font-medium">
+
+                                        Banking Partners
+
+                                    </p>
 
 
-                </div>
+                                </div>
 
 
-
-            </div>
+                            </div>
 
 
 
+                        </div>
 
 
-            <button
-                className="
+
+
+
+                        <button
+                            className="
                 mt-8
                 rounded-full
                 bg-gray-700
@@ -1227,27 +1227,27 @@ export default function BlueprintHero() {
                 hover:scale-105
                 hover:bg-[#0a6b63]
                 "
-            >
+                        >
 
-                <Link href="/about">
+                            <Link href="/about">
 
-                    Discover Our Story
+                                Discover Our Story
 
-                </Link>
+                            </Link>
 
-            </button>
-
-
-
-        </div>
+                        </button>
 
 
 
-    </div>
+                    </div>
 
 
 
-</section>
+                </div>
+
+
+
+            </section>
 
 
             <section className="mt-10">
@@ -1256,9 +1256,9 @@ export default function BlueprintHero() {
 
 
 
-           <section
-    id="advisor"
-    className="
+            <section
+                id="advisor"
+                className="
     relative
     overflow-hidden
     bg-[#f8fbfb]
@@ -1267,14 +1267,14 @@ export default function BlueprintHero() {
     py-10
     lg:py-20
     "
->
-    {/* Background */}
-    <div className="absolute left-0 top-0 h-72 w-72 lg:h-96 lg:w-96 rounded-full bg-[#0e847b]/10 blur-[120px]" />
-    <div className="absolute right-0 bottom-0 h-72 w-72 lg:h-96 lg:w-96 rounded-full bg-yellow-300/10 blur-[120px]" />
+            >
+                {/* Background */}
+                <div className="absolute left-0 top-0 h-72 w-72 lg:h-96 lg:w-96 rounded-full bg-[#0e847b]/10 blur-[120px]" />
+                <div className="absolute right-0 bottom-0 h-72 w-72 lg:h-96 lg:w-96 rounded-full bg-yellow-300/10 blur-[120px]" />
 
 
-    <div
-        className="
+                <div
+                    className="
         relative
         mx-auto
         w-full
@@ -1284,14 +1284,14 @@ export default function BlueprintHero() {
         px-5
         lg:px-8
         "
-    >
+                >
 
 
-        {/* Heading */}
-        <div className="text-center">
+                    {/* Heading */}
+                    <div className="text-center">
 
-            <p
-                className="
+                        <p
+                            className="
                 uppercase
                 tracking-[0.25em]
                 lg:tracking-[0.4em]
@@ -1302,13 +1302,13 @@ export default function BlueprintHero() {
                 sm:text-sm
                 lg:text-base
                 "
-            >
-                Why FAB
-            </p>
+                        >
+                            Why FAB
+                        </p>
 
 
-            <h2
-                className="
+                        <h2
+                            className="
                 mt-5
                 text-2xl
                 sm:text-3xl
@@ -1316,13 +1316,13 @@ export default function BlueprintHero() {
                 font-bold
                 text-gray-900
                 "
-            >
-                Your Financial Journey
-            </h2>
+                        >
+                            Your Financial Journey
+                        </h2>
 
 
-            <p
-                className="
+                        <p
+                            className="
                 mt-5
                 mx-auto
                 max-w-2xl
@@ -1333,19 +1333,19 @@ export default function BlueprintHero() {
                 leading-7
                 lg:leading-8
                 "
-            >
-                Every client has different financial goals.
-                Our role is to guide you through each milestone
-                with clarity, confidence and expert support.
-            </p>
+                        >
+                            Every client has different financial goals.
+                            Our role is to guide you through each milestone
+                            with clarity, confidence and expert support.
+                        </p>
 
-        </div>
+                    </div>
 
 
 
-        {/* Timeline */}
-        <div
-            className="
+                    {/* Timeline */}
+                    <div
+                        className="
             relative
             w-full
             lg:w-[90%]
@@ -1354,13 +1354,13 @@ export default function BlueprintHero() {
             mt-12
             lg:mt-20
             "
-        >
+                    >
 
 
-            {/* Vertical Line */}
+                        {/* Vertical Line */}
 
-            <div
-                className="
+                        <div
+                            className="
                 absolute
                 left-5
                 sm:left-8
@@ -1374,37 +1374,37 @@ export default function BlueprintHero() {
                 via-[#14b8a6]
                 to-yellow-300
                 "
-            />
+                        />
 
 
 
-            {[
-                {
-                    title: "Financial Solutions",
-                    desc: "Flexible financial products designed around your personal and business needs.",
-                    image: "/images/solution.jpg",
-                },
-                {
-                    title: "Mortgages",
-                    desc: "Access competitive mortgage options from trusted banking partners.",
-                    image: "/images/mortgage.jpg",
-                },
-                {
-                    title: "UAE Golden Visa",
-                    desc: "Expert guidance to help you secure long-term residency.",
-                    image: "/images/goldenvisa.webp",
-                },
-                {
-                    title: "End-to-end Support",
-                    desc: "We're here even after approval to support your financial future.",
-                    image: "/images/support.jpg",
-                },
-            ].map((item,index)=>(
+                        {[
+                            {
+                                title: "Financial Solutions",
+                                desc: "Flexible financial products designed around your personal and business needs.",
+                                image: "/images/solution.jpg",
+                            },
+                            {
+                                title: "Mortgages",
+                                desc: "Access competitive mortgage options from trusted banking partners.",
+                                image: "/images/mortgage.jpg",
+                            },
+                            {
+                                title: "UAE Golden Visa",
+                                desc: "Expert guidance to help you secure long-term residency.",
+                                image: "/images/goldenvisa.webp",
+                            },
+                            {
+                                title: "End-to-end Support",
+                                desc: "We're here even after approval to support your financial future.",
+                                image: "/images/support.jpg",
+                            },
+                        ].map((item, index) => (
 
 
-                <div
-                    key={item.title}
-                    className="
+                            <div
+                                key={item.title}
+                                className="
                     relative
                     mb-14
                     lg:mb-20
@@ -1414,55 +1414,55 @@ export default function BlueprintHero() {
                     lg:items-center
                     lg:min-h-[260px]
                     "
-                >
+                            >
 
 
 
-                    {/* MOBILE IMAGE */}
+                                {/* MOBILE IMAGE */}
 
-                    <div
-                        className="
+                                <div
+                                    className="
                         lg:hidden
                         w-full
                         pl-12
                         sm:pl-16
                         pr-2
                         "
-                    >
+                                >
 
-                        <div
-                            className="
+                                    <div
+                                        className="
                             overflow-hidden
                             rounded-3xl
                             shadow-xl
                             "
-                        >
+                                    >
 
-                            <Image
-                                src={item.image}
-                                alt={item.title}
-                                width={600}
-                                height={300}
-                                className="
+                                        <Image
+                                            src={item.image}
+                                            alt={item.title}
+                                            width={600}
+                                            height={300}
+                                            className="
                                 w-full
                                 h-40
                                 sm:h-44
                                 object-cover
                                 "
-                            />
+                                        />
 
-                        </div>
+                                    </div>
 
-                    </div>
-
-
+                                </div>
 
 
 
-                    {/* DESKTOP IMAGE */}
 
-                    <div
-                        className={`
+
+                                {/* DESKTOP IMAGE */}
+
+                                <div
+                                    className={`
                         hidden
                         lg:block
                         absolute
@@ -1470,28 +1470,27 @@ export default function BlueprintHero() {
                         -translate-y-1/2
                         w-[38%]
 
-                        ${
-                            index % 2 === 0
-                            ? "right-0"
-                            : "left-0"
-                        }
+                        ${index % 2 === 0
+                                            ? "right-0"
+                                            : "left-0"
+                                        }
                         `}
-                    >
+                                >
 
-                        <div
-                            className="
+                                    <div
+                                        className="
                             overflow-hidden
                             rounded-3xl
                             shadow-xl
                             "
-                        >
+                                    >
 
-                            <Image
-                                src={item.image}
-                                alt={item.title}
-                                width={500}
-                                height={300}
-                                className="
+                                        <Image
+                                            src={item.image}
+                                            alt={item.title}
+                                            width={500}
+                                            height={300}
+                                            className="
                                 h-54
                                 w-full
                                 object-cover
@@ -1499,23 +1498,23 @@ export default function BlueprintHero() {
                                 duration-700
                                 hover:scale-105
                                 "
-                            />
+                                        />
 
-                        </div>
-
-
-                    </div>
+                                    </div>
 
 
+                                </div>
 
 
 
 
 
-                    {/* CARD */}
 
-                    <div
-                        className={`
+
+                                {/* CARD */}
+
+                                <div
+                                    className={`
                         mt-4
                         ml-12
                         sm:ml-16
@@ -1526,16 +1525,15 @@ export default function BlueprintHero() {
                         lg:mr-0
                         lg:w-[42%]
 
-                        ${
-                            index % 2 === 0
-                            ? "lg:mr-auto"
-                            : "lg:ml-auto"
-                        }
+                        ${index % 2 === 0
+                                            ? "lg:mr-auto"
+                                            : "lg:ml-auto"
+                                        }
                         `}
-                    >
+                                >
 
-                        <div
-                            className="
+                                    <div
+                                        className="
                             rounded-3xl
                             bg-white
                             p-5
@@ -1546,23 +1544,23 @@ export default function BlueprintHero() {
                             hover:-translate-y-2
                             hover:shadow-2xl
                             "
-                        >
+                                    >
 
-                            <h3
-                                className="
+                                        <h3
+                                            className="
                                 text-lg
                                 sm:text-xl
                                 lg:text-2xl
                                 font-bold
                                 text-[#0e847b]
                                 "
-                            >
-                                {item.title}
-                            </h3>
+                                        >
+                                            {item.title}
+                                        </h3>
 
 
-                            <p
-                                className="
+                                        <p
+                                            className="
                                 mt-3
                                 lg:mt-4
                                 text-sm
@@ -1571,25 +1569,25 @@ export default function BlueprintHero() {
                                 lg:leading-8
                                 text-gray-600
                                 "
-                            >
-                                {item.desc}
-                            </p>
+                                        >
+                                            {item.desc}
+                                        </p>
 
 
-                        </div>
+                                    </div>
 
 
-                    </div>
-
-
-
+                                </div>
 
 
 
-                    {/* DOT */}
 
-                    <div
-                        className="
+
+
+                                {/* DOT */}
+
+                                <div
+                                    className="
                         absolute
                         left-5
                         sm:left-8
@@ -1608,30 +1606,30 @@ export default function BlueprintHero() {
                         bg-[#0e847b]
                         shadow-[0_0_20px_rgba(14,132,123,.6)]
                         "
-                    />
+                                />
 
+
+
+                            </div>
+
+
+                        ))}
+
+
+                    </div>
 
 
                 </div>
 
 
-            ))}
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
+            </section>
 
 
 
-{/* Services */}
-<section
-    id="services"
-    className="
+            {/* Services */}
+            <section
+                id="services"
+                className="
         relative
         overflow-hidden
         bg-white
@@ -1639,14 +1637,14 @@ export default function BlueprintHero() {
         md:py-16
         lg:py-20
     "
->
-    {/* Background Blur */}
-    <div className="absolute -top-20 left-0 h-80 w-80 rounded-full bg-[#0e847b]/10 blur-[120px]" />
-    <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-yellow-300/10 blur-[120px]" />
+            >
+                {/* Background Blur */}
+                <div className="absolute -top-20 left-0 h-80 w-80 rounded-full bg-[#0e847b]/10 blur-[120px]" />
+                <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-yellow-300/10 blur-[120px]" />
 
 
-    <div
-        className="
+                <div
+                    className="
             relative
             mx-auto
             w-full
@@ -1655,15 +1653,15 @@ export default function BlueprintHero() {
             sm:px-6
             lg:px-8
         "
-    >
+                >
 
 
-        {/* Heading */}
-        <div className="text-center">
+                    {/* Heading */}
+                    <div className="text-center">
 
 
-            <p
-                className="
+                        <p
+                            className="
                     uppercase
                     tracking-[0.25em]
                     md:tracking-[0.4em]
@@ -1672,13 +1670,13 @@ export default function BlueprintHero() {
                     text-sm
                     md:text-base
                 "
-            >
-                Our Services
-            </p>
+                        >
+                            Our Services
+                        </p>
 
 
-            <h2
-                className="
+                        <h2
+                            className="
                     mt-4
                     text-2xl
                     sm:text-3xl
@@ -1687,13 +1685,13 @@ export default function BlueprintHero() {
                     leading-tight
                     text-gray-900
                 "
-            >
-                Financial Solutions Designed Around You
-            </h2>
+                        >
+                            Financial Solutions Designed Around You
+                        </h2>
 
 
-            <p
-                className="
+                        <p
+                            className="
                     mx-auto
                     mt-5
                     max-w-2xl
@@ -1704,22 +1702,22 @@ export default function BlueprintHero() {
                     md:leading-8
                     text-gray-600
                 "
-            >
-                Whether you're buying your dream home, growing your business,
-                or planning your future, our experts provide tailored financial
-                solutions with complete transparency.
-            </p>
+                        >
+                            Whether you're buying your dream home, growing your business,
+                            or planning your future, our experts provide tailored financial
+                            solutions with complete transparency.
+                        </p>
 
 
-        </div>
+                    </div>
 
 
 
 
 
-        {/* Cards */}
-        <div
-            className="
+                    {/* Cards */}
+                    <div
+                        className="
                 mt-8
                 md:mt-16
                 grid
@@ -1729,43 +1727,43 @@ export default function BlueprintHero() {
                 md:gap-8
                 w-full
             "
-        >
+                    >
 
 
 
-            {[
-                {
-                    icon:"🔑",
-                    title:"Mortgages",
-                    desc:"Competitive mortgage solutions from leading UAE banks with expert guidance through every step."
-                },
-                {
-                    icon:"🏢",
-                    title:"Business Finance",
-                    desc:"Working capital, equipment finance and customized lending solutions to accelerate business growth."
-                },
-                {
-                    icon:"✨",
-                    title:"Golden Visa",
-                    desc:"End-to-end assistance with UAE Golden Visa eligibility, investment planning and documentation."
-                },
-                {
-                    icon:"🧭",
-                    title:"Financial Advisory",
-                    desc:"Personalized financial guidance to help you make confident borrowing and investment decisions."
-                },
-                {
-                    icon:"🤝",
-                    title:"Resident's Support",
-                    desc:"Dedicated assistance for UAE residents with financial guidance, documentation support and ongoing service whenever you need it."
-                }
+                        {[
+                            {
+                                icon: "🔑",
+                                title: "Mortgages",
+                                desc: "Competitive mortgage solutions from leading UAE banks with expert guidance through every step."
+                            },
+                            {
+                                icon: "🏢",
+                                title: "Business Finance",
+                                desc: "Working capital, equipment finance and customized lending solutions to accelerate business growth."
+                            },
+                            {
+                                icon: "✨",
+                                title: "Golden Visa",
+                                desc: "End-to-end assistance with UAE Golden Visa eligibility, investment planning and documentation."
+                            },
+                            {
+                                icon: "🧭",
+                                title: "Financial Advisory",
+                                desc: "Personalized financial guidance to help you make confident borrowing and investment decisions."
+                            },
+                            {
+                                icon: "🤝",
+                                title: "Resident's Support",
+                                desc: "Dedicated assistance for UAE residents with financial guidance, documentation support and ongoing service whenever you need it."
+                            }
 
-            ].map((service,index)=>(
+                        ].map((service, index) => (
 
 
-                <div
-                    key={index}
-                    className="
+                            <div
+                                key={index}
+                                className="
                         relative
                         overflow-hidden
                         rounded-2xl
@@ -1774,13 +1772,13 @@ export default function BlueprintHero() {
                         w-full
                         beam-card
                     "
-                >
+                            >
 
-                    <div className="beam absolute inset-0"></div>
+                                <div className="beam absolute inset-0"></div>
 
 
-                    <div
-                        className="
+                                <div
+                                    className="
                             relative
                             z-10
                             rounded-[20px]
@@ -1793,11 +1791,11 @@ export default function BlueprintHero() {
                             hover:-translate-y-2
                             md:hover:-translate-y-3
                         "
-                    >
+                                >
 
 
-                        <div
-                            className="
+                                    <div
+                                        className="
                                 mb-4
                                 flex
                                 h-12
@@ -1814,28 +1812,28 @@ export default function BlueprintHero() {
                                 sm:text-2xl
                                 md:text-3xl
                             "
-                        >
-                            {service.icon}
-                        </div>
+                                    >
+                                        {service.icon}
+                                    </div>
 
 
 
-                        <h3
-                            className="
+                                    <h3
+                                        className="
                                 text-lg
                                 sm:text-xl
                                 md:text-2xl
                                 font-bold
                                 text-black
                             "
-                        >
-                            {service.title}
-                        </h3>
+                                    >
+                                        {service.title}
+                                    </h3>
 
 
 
-                        <p
-                            className="
+                                    <p
+                                        className="
                                 mt-3
                                 text-sm
                                 md:text-base
@@ -1843,14 +1841,14 @@ export default function BlueprintHero() {
                                 md:leading-8
                                 text-black
                             "
-                        >
-                            {service.desc}
-                        </p>
+                                    >
+                                        {service.desc}
+                                    </p>
 
 
 
-                        <button
-                            className="
+                                    <button
+                                        className="
                                 mt-5
                                 md:mt-7
                                 inline-block
@@ -1861,29 +1859,29 @@ export default function BlueprintHero() {
                                 hover:translate-x-1
                                 transition
                             "
-                        >
-                            Learn More →
-                        </button>
+                                    >
+                                        Learn More →
+                                    </button>
 
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        ))}
 
 
                     </div>
 
 
+
                 </div>
 
 
-            ))}
-
-
-        </div>
-
-
-
-    </div>
-
-
-</section>
+            </section>
 
             {/* Mortgage Calculator */}
             <section className="my-6 lg:my-15 px-4 lg:px-6">
