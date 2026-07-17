@@ -22,16 +22,15 @@ const menuItems = [
 
 export default function Sidebar() {
     return (
-        <aside
-            className="
+       <aside
+    className="
     fixed
     top-0
-    md:left-0
     right-0
     z-50
 
     w-auto
-    h-16
+    h-20
 
     flex
     items-center
@@ -39,25 +38,41 @@ export default function Sidebar() {
     px-4
     gap-4
 
+    md:left-0
     md:h-screen
     md:w-40
     md:flex-col
     md:gap-4
     md:py-6
   "
-        >
+>
             {/* Logo */}
-            <div className="flex items-center md:justify-center md:px-2 md:py-4">
-                <a href="/">
-                    <Image
-                        src="/images/logo.jpeg"
-                        alt="FAB"
-                        width={140}
-                        height={150}
-                        className="object-contain w-30 h-auto md:w-[140px]"
-                    />
-                </a>
-            </div>
+           <div className="
+    flex
+    items-center
+    md:justify-center
+    md:px-2
+    md:py-4
+">
+
+    <Link href="/">
+        <Image
+            src="/images/logo.jpeg"
+            alt="FAB"
+            width={180}
+            height={100}
+            priority
+            className="
+                object-contain
+                w-[110px]
+                sm:w-[130px]
+                md:w-[140px]
+                h-auto
+            "
+        />
+    </Link>
+
+</div>
 
             {/* Menu */}
             <nav
