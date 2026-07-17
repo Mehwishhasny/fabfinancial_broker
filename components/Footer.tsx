@@ -12,13 +12,37 @@ export default function Footer() {
             <div className="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-[#0e847b]/20 blur-3xl" />
 
 
-            <div className="relative mx-0 md:mx-auto md:max-w-5xl max-w-[300px] px-4 py-6">
+            <div
+                className="
+                    relative
+                    mx-auto
+                    w-full
+                    max-w-6xl
+                    px-5
+                    sm:px-8
+                    lg:px-10
+                    py-10
+                    md:py-16
+                "
+            >
 
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                {/* FOOTER GRID */}
+                <div
+                    className="
+                        grid
+                        grid-cols-1
+                        sm:grid-cols-3
+                        lg:grid-cols-4
+                        gap-10
+                        text-center
+                        sm:text-left
+                    "
+                >
 
 
-                    <div className="space-y-5">
+                    {/* LOGO */}
+                    <div className="space-y-5 flex flex-col items-center sm:items-start">
 
                         <Image
                             src="/images/logo.jpeg"
@@ -28,11 +52,10 @@ export default function Footer() {
                             className="object-contain"
                         />
 
-                        <p className="text-gray-600 leading-7 text-sm">
-                            Secure and smarter financial
-                            solutions across the UAE with trusted mortgage.
+                        <p className="text-gray-600 leading-7 text-sm max-w-xs">
+                            Secure and smarter financial solutions across the UAE
+                            with trusted mortgage guidance.
                         </p>
-
 
                     </div>
 
@@ -46,26 +69,27 @@ export default function Footer() {
                         </h3>
 
                         <ul className="space-y-4 text-gray-600 text-sm mt-4">
+
                             <li>
-                                <Link href="/about" className="hover:text-[#0e847b] cursor-pointer">
+                                <Link href="/about" className="hover:text-[#0e847b]">
                                     About Us
                                 </Link>
                             </li>
 
                             <li>
-                                <Link href="/services" className="hover:text-[#0e847b] cursor-pointer">
+                                <Link href="/services" className="hover:text-[#0e847b]">
                                     Services
                                 </Link>
                             </li>
 
                             <li>
-                                <Link href="/calculator" className="hover:text-[#0e847b] cursor-pointer">
+                                <Link href="/calculator" className="hover:text-[#0e847b]">
                                     Calculator
                                 </Link>
                             </li>
 
                             <li>
-                                <Link href="/contact" className="hover:text-[#0e847b] cursor-pointer">
+                                <Link href="/contact" className="hover:text-[#0e847b]">
                                     Contact
                                 </Link>
                             </li>
@@ -86,32 +110,33 @@ export default function Footer() {
 
 
                         <ul className="space-y-4 text-gray-600 text-sm mt-4">
+
                             <li>
-                                <Link href="/services#mortgages" className="hover:text-[#0e847b] cursor-pointer">
+                                <Link href="/services#mortgages" className="hover:text-[#0e847b]">
                                     Mortgages
                                 </Link>
                             </li>
 
                             <li>
-                                <Link href="/services#business-finance" className="hover:text-[#0e847b] cursor-pointer">
+                                <Link href="/services#business-finance" className="hover:text-[#0e847b]">
                                     Business Finance
                                 </Link>
                             </li>
 
                             <li>
-                                <Link href="/services#golden-visa" className="hover:text-[#0e847b] cursor-pointer">
+                                <Link href="/services#golden-visa" className="hover:text-[#0e847b]">
                                     Golden Visa
                                 </Link>
                             </li>
 
                             <li>
-                                <Link href="/services#financial-advisory" className="hover:text-[#0e847b] cursor-pointer">
+                                <Link href="/services#financial-advisory" className="hover:text-[#0e847b]">
                                     Financial Advisory
                                 </Link>
                             </li>
 
                             <li>
-                                <Link href="/services#residency-support" className="hover:text-[#0e847b] cursor-pointer">
+                                <Link href="/services#residency-support" className="hover:text-[#0e847b]">
                                     Residency Support
                                 </Link>
                             </li>
@@ -125,17 +150,29 @@ export default function Footer() {
 
 
                     {/* Contact */}
-                    <div>
+                    <div className="sm:col-span-3 lg:col-span-1">
 
                         <h3 className="text-md text-gray-700 font-semibold">
                             Contact Us
                         </h3>
 
 
-                        <div className="space-y-5 text-sm text-gray-600">
+                        <div className="
+                            mt-4
+                            space-y-5
+                            text-sm
+                            text-gray-600
+                            flex
+                            flex-col
+                            items-center
+                            sm:items-start
+                        ">
 
-                            <div className="flex gap-3">
+
+                            <div className="flex gap-3 max-w-xs">
+
                                 <span>📍</span>
+
                                 <a
                                     href="https://maps.google.com/?q=Office+1104+Al+Fattan+Office+Tower+Dubai+Marina+UAE"
                                     target="_blank"
@@ -145,92 +182,160 @@ export default function Footer() {
                                     Office 1104, Al Fattan Office Tower,
                                     Dubai Marina, UAE
                                 </a>
+
                             </div>
 
+
+
                             <div className="flex gap-3">
+
                                 <span>📞</span>
+
                                 <a
                                     href="tel:+971542321423"
                                     className="hover:text-[#0e847b]"
                                 >
                                     +971 54 232 1423
                                 </a>
+
                             </div>
 
+
+
                             <div className="flex gap-3">
+
                                 <span>✉️</span>
+
                                 <a
                                     href="mailto:fabfinancialbroker@gmail.com"
                                     className="hover:text-[#0e847b]"
                                 >
                                     fabfinancialbroker@gmail.com
                                 </a>
+
                             </div>
+
 
                         </div>
 
 
                     </div>
 
+
                 </div>
 
-                {/* Map + CTA */}
-                <div className="mt-12 flex flex-col items-center justify-center gap-6">
-                    {/* Map */}
-
-                        <div className="overflow-hidden rounded-3xl shadow-xl border border-black/10 w-full max-w-[700px]">
-                            <iframe
-                                className="w-full h-[250px] md:h-[320px]"
-                                loading="lazy"
-                                allowFullScreen
-                                referrerPolicy="no-referrer-when-downgrade"
-                                src="https://www.google.com/maps?q=Office+1104,+Al+Fattan+Office+Tower,+Dubai+Marina,+Dubai,+UAE&output=embed"
-                            />
-                        </div>
 
 
-                    {/* CTA Button */}
+
+
+                {/* MAP */}
+                <div className="mt-12 flex flex-col items-center gap-6">
+
+
+                    <div
+                        className="
+                            overflow-hidden
+                            rounded-3xl
+                            shadow-xl
+                            border
+                            border-black/10
+                            w-full
+                            max-w-[700px]
+                        "
+                    >
+
+                        <iframe
+
+                            className="
+                                w-full
+                                h-[250px]
+                                md:h-[320px]
+                            "
+
+                            loading="lazy"
+
+                            allowFullScreen
+
+                            referrerPolicy="no-referrer-when-downgrade"
+
+                            src="https://www.google.com/maps?q=Office+1104,+Al+Fattan+Office+Tower,+Dubai+Marina,+Dubai,+UAE&output=embed"
+
+                        />
+
+                    </div>
+
+
+
+
 
                     <a
                         href="https://wa.me/971542117385"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="
-                                inline-flex
-                                items-center
-                                justify-center
-                                rounded-full
-                                bg-[#0e847b]
-                                px-8
-                                py-4
-                                text-sm
-                                md:text-base
-                                font-semibold
-                                text-white
-                                shadow-lg
-                                transition-all
-                                duration-300
-                                hover:scale-105
-                                hover:bg-[#0a6b63]
-    "
+                            inline-flex
+                            items-center
+                            justify-center
+                            rounded-full
+                            bg-[#0e847b]
+                            px-8
+                            py-4
+                            text-sm
+                            md:text-base
+                            font-semibold
+                            text-white
+                            shadow-lg
+                            transition-all
+                            duration-300
+                            hover:scale-105
+                            hover:bg-[#0a6b63]
+                        "
                     >
                         Book Free Consultation
 
                     </a>
 
+
                 </div>
 
 
+
+
+
+                {/* COPYRIGHT */}
+
                 <div className="mt-12 border-t border-black/10 pt-6">
 
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+
+                    <div
+                        className="
+                            flex
+                            flex-col
+                            md:flex-row
+                            items-center
+                            justify-between
+                            gap-4
+                            text-center
+                        "
+                    >
 
                         <p className="text-gray-500 text-sm">
                             © {new Date().getFullYear()} FAB Financial Broker.
                             All rights reserved.
                         </p>
 
-                        <div className="flex gap-6 text-sm text-gray-500">
+
+
+                        <div
+                            className="
+                                flex
+                                flex-wrap
+                                justify-center
+                                gap-5
+                                text-sm
+                                text-gray-500
+                            "
+                        >
 
                             <a className="hover:text-[#0e847b]">
                                 Privacy Policy
@@ -246,10 +351,15 @@ export default function Footer() {
 
                         </div>
 
+
                     </div>
 
+
                 </div>
+
+
             </div>
-        </section >
-    )
-};
+
+        </section>
+    );
+}
