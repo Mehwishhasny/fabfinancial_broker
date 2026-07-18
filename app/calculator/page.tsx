@@ -215,6 +215,9 @@ export default function MortgageCalculator() {
                                 ml-0
                                 md:ml-40
                                 max-w-6xl
+                                mt-10
+                md:mt-0
+                lg:mt-0
                             "
                 >
 

@@ -60,18 +60,18 @@ items-center
 <Link href="/">
 
 <Image
-src="/images/logo.jpeg"
-alt="FAB"
-width={180}
-height={120}
-priority
-className="
-object-contain
-w-[160px]
-h-auto
+  src="/images/logo.jpeg"
+  alt="FAB"
+  width={140}
+  height={100}
+  priority
+  className="
+    object-contain
+    w-[110px]
+    h-auto
 
-md:w-[140px]
-"
+    md:w-[120px]
+  "
 />
 
 </Link>
@@ -118,79 +118,79 @@ const Icon=item.icon;
 return(
 
 <Link
+  key={item.label}
+  href={item.href}
+  className="
+    group
+    relative
 
-key={item.label}
+    flex
+    flex-col
+    items-center
+    justify-center
 
-href={item.href}
+    w-12
 
-className="
-group
-relative
+    md:h-12
+    md:w-12
 
-flex
-items-center
-justify-center
+    rounded-full
 
-h-10
-w-10
+    transition-all
+    duration-300
 
-md:h-12
-md:w-12
-
-rounded-full
-
-hover:bg-slate-900
-
-transition-all
-duration-300
-"
-
+    md:hover:bg-slate-900
+  "
 >
+  <Icon
+    className="
+      text-white
+      w-6
+      h-6
+    "
+  />
 
+  {/* Mobile Label */}
+  <span
+    className="
+      mt-1
+      text-[10px]
+      text-white
+      font-medium
 
-<Icon
-className="
-text-white
-w-6
-h-6
-"
-/>
+      md:hidden
+    "
+  >
+    {item.label}
+  </span>
 
+  {/* Desktop Tooltip */}
+  <span
+    className="
+      hidden
+      md:block
 
-{/* Desktop Tooltip */}
+      absolute
+      left-14
 
-<span
-className="
-hidden
-md:block
+      px-4
+      py-2
 
-absolute
-left-14
+      rounded-full
+      bg-slate-900
 
-px-4
-py-2
+      text-white
+      text-sm
 
-rounded-full
-bg-slate-900
+      opacity-0
+      group-hover:opacity-100
 
-text-white
-text-sm
-
-opacity-0
-
-group-hover:opacity-100
-
-transition
-
-whitespace-nowrap
-"
->
-
-{item.label}
-
-</span>
-
-
+      transition
+      whitespace-nowrap
+    "
+  >
+    {item.label}
+  </span>
 </Link>
 
 

@@ -127,10 +127,12 @@ export default function ServicesPage() {
 
 
         <h1 className="
-            mt-6
             text-3xl
             md:text-5xl
             font-bold
+                  mt-10
+                md:mt-0
+                lg:mt-0
             text-gray-900
             leading-tight
         ">

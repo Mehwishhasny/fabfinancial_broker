@@ -42,7 +42,9 @@ export default function MortgagesPage() {
           <div className="grid items-center gap-14 lg:grid-cols-2">
 
             {/* LEFT */}
-            <div>
+            <div className="mt-10
+                md:mt-0
+                lg:mt-0">
 
               <p className="uppercase tracking-[0.35em] text-[#0e847b] font-semibold">
                 Mortgage Solutions
