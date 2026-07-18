@@ -35,11 +35,9 @@ export default function ContactPage() {
 
             {/* LEFT */}
 
-            <div className="      mt-10
-                md:mt-0
-                lg:mt-0">
+            <div>
 
-              <p className="uppercase tracking-[0.5em] font-semibold text-[#0e847b]">
+              <p className="uppercase tracking-[0.5em] font-semibold text-[#0e847b] mt-12 md:mt-0 lg:mt-0">
                 Contact FAB
               </p>
 

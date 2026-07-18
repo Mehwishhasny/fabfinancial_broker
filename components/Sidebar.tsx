@@ -94,8 +94,8 @@ gap-3
 
 rounded-full
 bg-[#0e847b]
-px-5
-py-2
+px-4
+py-1
 opacity-90
 
 
@@ -154,7 +154,7 @@ return(
   <span
     className="
       mt-1
-      text-[10px]
+      text-[8px]
       text-white
       font-medium
 

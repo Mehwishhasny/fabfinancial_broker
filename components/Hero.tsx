@@ -201,34 +201,21 @@ export default function BlueprintHero() {
 
 
 
-    useEffect(() => {
+  useEffect(() => {
 
+    const check = () => {
+        setIsMobile(window.innerWidth < 768);
+    };
 
-        const handleResize = () => {
+    check();
 
-            setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", check);
 
-        };
+    return () => {
+        window.removeEventListener("resize", check);
+    };
 
-
-        handleResize();
-
-
-        window.addEventListener(
-            "resize",
-            handleResize
-        );
-
-
-        return () =>
-
-            window.removeEventListener(
-                "resize",
-                handleResize
-            );
-
-
-    }, []);
+}, []);
 
 
 
@@ -2125,94 +2112,103 @@ export default function BlueprintHero() {
 
                     </div>
 
-                    {/* Cards */}
-                    <div className="mt-10 md:mt-14 overflow-hidden w-full">
+{/* Cards */}
+<div className="mt-10 md:mt-14 overflow-hidden w-full">
 
-                        <div
-                            className="
-                    flex
-                    gap-4
-                    md:gap-6
-                    transition-transform
-                    duration-700
-                    ease-in-out
+    <div
+        className="
+            flex
+            gap-4
+            md:gap-6
+            transition-transform
+            duration-700
+            ease-in-out
+        "
+        style={{
+            transform: `translateX(-${active * (isMobile ? 100 : 50)}%)`,
+        }}
+    >
+
+        {testimonials.map((item, index) => (
+
+            <div
+                key={index}
+                className="
+                    flex-shrink-0
+                    w-full
+                    md:w-[calc(50%-12px)]
+                    rounded-3xl
+                    bg-white
+                    p-5
+                    md:p-6
+                    shadow-lg
+                    transition
+                    duration-500
+                    hover:-translate-y-2
                 "
-                            style={{
-                                transform: `translateX(-${isMobile ? active * 100 : active * 50}%)`,
-                            }}
-                        >
+            >
 
-                            {testimonials.map((item, index) => (
+                <div className="text-2xl md:text-3xl text-[#0e847b]">
+                    "
+                </div>
 
-                                <div
-                                    key={index}
-                                    className="
-                            min-w-full 
-                            w-full
-                            md:min-w-[calc(50%-12px)]
-                            rounded-3xl
-                            bg-white
-                            p-5
-                            md:p-6
-                            shadow-lg
-                            transition
-                            duration-500
-                            hover:-translate-y-2
+
+                <p className="
+                    mt-4
+                    text-sm
+                    md:text-base
+                    text-gray-600
+                    leading-7
+                    md:leading-relaxed
+                ">
+                    {item.quote}
+                </p>
+
+
+                <div className="mt-6 flex items-center gap-4">
+
+                    <div
+                        className="
+                            flex
+                            h-10
+                            w-10
+                            md:h-12
+                            md:w-12
+                            items-center
+                            justify-center
+                            rounded-full
+                            bg-[#0e847b]
+                            text-white
+                            font-bold
                         "
-                                >
+                    >
+                        {item.initials}
+                    </div>
 
-                                    <div className="text-2xl md:text-3xl text-[#0e847b]">
-                                        "
-                                    </div>
 
-                                    <p className="mt-4 text-sm md:text-base text-gray-600 leading-7 md:leading-relaxed">
-                                        {item.quote}
-                                    </p>
+                    <div>
 
-                                    <div className="mt-6 flex items-center gap-4">
+                        <h4 className="text-sm font-semibold text-gray-900">
+                            {item.name}
+                        </h4>
 
-                                        <div
-                                            className="
-                                    flex
-                                    h-10
-                                    w-10
-                                    md:h-12
-                                    md:w-12
-                                    items-center
-                                    justify-center
-                                    rounded-full
-                                    bg-[#0e847b]
-                                    text-white
-                                    text-sm
-                                    md:text-base
-                                    font-bold
-                                "
-                                        >
-                                            {item.initials}
-                                        </div>
-
-                                        <div>
-
-                                            <h4 className="text-sm font-semibold text-gray-900">
-                                                {item.name}
-                                            </h4>
-
-                                            <p className="text-xs md:text-sm text-gray-500">
-                                                {item.role}
-                                            </p>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            ))}
-
-                        </div>
+                        <p className="text-xs md:text-sm text-gray-500">
+                            {item.role}
+                        </p>
 
                     </div>
 
+
+                </div>
+
+
+            </div>
+
+        ))}
+
+    </div>
+
+</div>
                     {/* Dots */}
                     <div className="mt-8 md:mt-10 flex justify-center gap-3">
 

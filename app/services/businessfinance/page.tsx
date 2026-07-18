@@ -87,15 +87,15 @@ uppercase
 tracking-[0.35em]
 font-semibold
 text-[#0e847b]
+mt-8
+md:mt-0
+lg:mt-0
 ">
                                 Business Finance
                             </p>
 
 
                             <h1 className="
-      mt-10
-                md:mt-0
-                lg:mt-0
 text-3xl
 sm:text-4xl
 md:text-5xl
@@ -460,6 +460,7 @@ absolute
 left-1/2
 bottom-4
 -translate-x-1/2
+translate-y-20
 
 lg:left-auto
 lg:right-0

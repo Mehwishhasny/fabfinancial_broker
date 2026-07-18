@@ -41,7 +41,7 @@ export default function ServicesPage() {
             image: "/images/resident.jpg",
             link: "/services/residentssupport",
             desc:
-                "Strategic financial advice to help you make informed borrowing, investment, and planning decisions."
+                "Personalized resident assistance designed to simplify processes and provide trusted guidance whenever you need it."
         }
     ];
 
@@ -121,6 +121,9 @@ export default function ServicesPage() {
             tracking-[0.4em]
             text-[#0e847b]
             font-semibold
+            mt-12
+            md:mt-0
+            lg:mt-0
         ">
             Our Services
         </p>
@@ -130,9 +133,6 @@ export default function ServicesPage() {
             text-3xl
             md:text-5xl
             font-bold
-                  mt-10
-                md:mt-0
-                lg:mt-0
             text-gray-900
             leading-tight
         ">

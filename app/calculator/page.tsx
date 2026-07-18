@@ -12,8 +12,8 @@ export default function MortgageCalculator() {
     const [residencyStatus, setResidencyStatus] =
         useState("First Mortgage");
 
-    const [mortgageType, setMortgageType] =
-        useState("Primary Market");
+   const [mortgageType, setMortgageType] =
+    useState("Secondary Market");
 
 
     const [propertyPrice, setPropertyPrice] =
@@ -24,16 +24,55 @@ export default function MortgageCalculator() {
         useState(25);
 
 
-    const interestRate = 4.49;
+    const interestRate =
+    residentType === "Resident"
+        ? 3.99
+        : 5.99;
 
 
 
+const downPaymentPercentage = (() => {
 
-    const downPaymentPercentage =
-        residencyStatus === "Second Mortgage"
-            ? 60
-            : 30;
+    if (residentType === "Resident") {
 
+        if (mortgageType === "Primary Market") {
+            return 25;
+        }
+
+        if (mortgageType === "Secondary Market") {
+            return 25;
+        }
+
+        if (mortgageType === "Cash Against New Property") {
+            return 40;
+        }
+
+        return 25;
+
+    } else {
+
+
+        if (mortgageType === "Primary Market") {
+            return 40;
+        }
+
+
+        if (mortgageType === "Secondary Market") {
+            return 40;
+        }
+
+
+        if (mortgageType === "Cash Against New Property") {
+            return 50;
+        }
+
+
+        return 40;
+
+    }
+
+
+})();
 
     const downPayment =
         propertyPrice * (downPaymentPercentage / 100);
@@ -228,7 +267,9 @@ export default function MortgageCalculator() {
                         tracking-[0.45em]
                         text-[#0e847b]
                         font-semibold
-                        "
+                         mt-12
+                md:mt-0
+                lg:mt-0"
                     >
                         Mortgage Calculator
                     </p>
@@ -504,30 +545,19 @@ md:p-4
 
                             >
 
-                                <option>
-                                    Primary Market
-                                </option>
+                               
 
+<option>
+Secondary Market
+</option>
 
-                                <option>
-                                    Secondary Market
-                                </option>
+<option>
+Developer Payment
+</option>
 
-
-                                <option>
-                                    Buyout Developer Payment
-                                </option>
-
-
-                                <option>
-                                    Developer + Equity
-                                </option>
-
-
-                                <option>
-                                    Cash Against New Property
-                                </option>
-
+<option>
+Cash Against Property
+</option>
 
                             </select>
 
@@ -611,7 +641,8 @@ md:p-4
                                 "
                             >
 
-                                AED {downPayment.toLocaleString()}
+                                {downPaymentPercentage}% 
+(AED {downPayment.toLocaleString()})
 
                             </div>
 

@@ -30,21 +30,30 @@ export default function Footer() {
 
 
                 {/* FOOTER GRID */}
-                <div
-                    className="
-                        grid
-                        grid-cols-2
-                        sm:grid-cols-3
-                        lg:grid-cols-4
-                        gap-10
-                        text-center
-                        sm:text-left
-                    "
-                >
+               <div
+    className="
+        grid
+        grid-cols-1
+        sm:grid-cols-3
+        lg:grid-cols-4
+        gap-10
+        text-center
+        sm:text-left
+    "
+>
 
 
                     {/* LOGO */}
-                    <div className="space-y-5 flex flex-col items-center sm:items-start">
+                    <div
+className="
+space-y-5
+flex
+flex-col
+items-center
+sm:items-start
+lg:col-span-1
+"
+>
 
                     <a href="/">
                         <Image
@@ -66,13 +75,34 @@ export default function Footer() {
 
 
                     {/* Explore */}
-                    <div>
+                    <div
+className="
+sm:flex
+sm:flex-col
+"
+>
 
                         <h3 className="text-md text-gray-700 font-semibold">
                             Explore
                         </h3>
 
-                        <ul className="space-y-4 text-gray-600 text-sm mt-4">
+                        <ul
+className="
+mt-4
+flex
+flex-row
+flex-wrap
+justify-center
+gap-5
+text-gray-600
+text-sm
+
+sm:flex-col
+sm:space-y-4
+sm:gap-0
+sm:justify-start
+"
+>
 
                             <li>
                                 <Link href="/about" className="hover:text-[#0e847b]">
@@ -106,41 +136,62 @@ export default function Footer() {
 
 
                     {/* Services */}
-                    <div>
+                    <div
+className="
+sm:flex
+sm:flex-col
+"
+>
 
                         <h3 className="text-md text-gray-700 font-semibold">
                             Services
                         </h3>
 
 
-                        <ul className="space-y-4 text-gray-600 text-sm mt-4">
+                        <ul
+className="
+mt-4
+flex
+flex-row
+flex-wrap
+justify-center
+gap-5
+text-gray-600
+text-sm
+
+sm:flex-col
+sm:space-y-4
+sm:gap-0
+sm:justify-start
+"
+>
 
                             <li>
-                                <Link href="/services#mortgages" className="hover:text-[#0e847b]">
+                                <Link href="/services/mortgages" className="hover:text-[#0e847b]">
                                     Mortgages
                                 </Link>
                             </li>
 
                             <li>
-                                <Link href="/services#business-finance" className="hover:text-[#0e847b]">
+                                <Link href="/services/businessfinance" className="hover:text-[#0e847b]">
                                     Business Finance
                                 </Link>
                             </li>
 
                             <li>
-                                <Link href="/services#golden-visa" className="hover:text-[#0e847b]">
+                                <Link href="/services/goldenvisa" className="hover:text-[#0e847b]">
                                     Golden Visa
                                 </Link>
                             </li>
 
                             <li>
-                                <Link href="/services#financial-advisory" className="hover:text-[#0e847b]">
+                                <Link href="/services/financialadvise" className="hover:text-[#0e847b]">
                                     Financial Advisory
                                 </Link>
                             </li>
 
                             <li>
-                                <Link href="/services#residency-support" className="hover:text-[#0e847b]">
+                                <Link href="/services/residentssupport" className="hover:text-[#0e847b]">
                                     Residency Support
                                 </Link>
                             </li>
@@ -154,7 +205,12 @@ export default function Footer() {
 
 
                     {/* Contact */}
-                    <div className="sm:col-span-3 lg:col-span-1">
+                    <div
+className="
+sm:col-span-3
+lg:col-span-1
+"
+>
 
                         <h3 className="text-md text-gray-700 font-semibold">
                             Contact Us

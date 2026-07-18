@@ -46,7 +46,7 @@ export default function ResidentsSupportPage() {
 
             {/* LEFT */}
 
-            <div className="      mt-10
+            <div className="mt-10
                 md:mt-0
                 lg:mt-0">
 
@@ -329,6 +329,7 @@ export default function ResidentsSupportPage() {
                   p-5
                   text-white
                   shadow-2xl
+                  translate-y-20
 
                   lg:left-auto
                   lg:right-5

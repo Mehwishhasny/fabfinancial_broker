@@ -41,19 +41,58 @@ export default function AboutPage() {
             <Sidebar />
 
             {/* Hero */}
-            <section className="relative overflow-hidden px-5 md:px-8 py-20 md:py-28">
+            <section className="relative overflow-hidden px-5 md:px-8 py-20 md:py-38">
+ {/* Background Image */}
+    <Image
+        src="/images/aboutbg.jpg"
+        alt="Financial Services Background"
+        fill
+        priority
+        className="object-cover"
+    />
 
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60" />
 
-                {/* Decorative Blurs */}
-                <div className="absolute -top-24 right-0 h-96 w-96 rounded-full bg-yellow-400/20 blur-3xl" />
+    {/* Dark/White Overlay */}
+    <div className="
+        absolute
+        inset-0
+        bg-gradient-to-r
+        from-white
+        via-white/60
+        to-white/60
+    "/>
 
-                <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#0e847b]/10 blur-3xl" />
+
+    {/* Decorative Blurs */}
+    <div className="
+        absolute
+        -top-24
+        right-0
+        h-96
+        w-96
+        rounded-full
+        bg-yellow-400/20
+        blur-3xl
+    "/>
+
+
+    <div className="
+        absolute
+        bottom-0
+        left-0
+        h-80
+        w-80
+        rounded-full
+        bg-[#0e847b]/10
+        blur-2xl
+    "/>
+
 
                 <div className="relative z-10 mx-auto max-w-6xl md:ml-40 text-center md:text-left">
 
-                    <p className="uppercase tracking-[0.4em] text-[#0e847b] font-semibold">
+                    <p className="uppercase tracking-[0.4em] text-[#0e847b] font-semibold mt-12
+                md:mt-0
+                lg:mt-0">
                         About FAB
                     </p>
 
@@ -108,9 +147,7 @@ export default function AboutPage() {
                     <div>
 
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-black mt-10
-                md:mt-0
-                lg:mt-0">
+                        <h2 className="text-2xl md:text-3xl font-bold text-black">
                             Who Are We
                         </h2>
 

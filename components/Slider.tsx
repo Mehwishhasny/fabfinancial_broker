@@ -15,7 +15,7 @@ export default function ImageSlider() {
         <section
             className="
                 relative
-                w-[300px]
+                w-[320px]
                 lg:w-[1000px]
                 overflow-hidden
                 py-10

@@ -51,7 +51,7 @@ export default function GoldenVisaPage() {
 
         {/* Overlay */}
 
-        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-gray/55" />
 
         {/* Decorative Glow */}
 
