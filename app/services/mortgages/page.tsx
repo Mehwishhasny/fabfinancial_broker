@@ -88,11 +88,11 @@ export default function MortgagesPage() {
               <div className="absolute inset-0 rounded-[40px] bg-[#0e847b]/10 blur-3xl" />
 
               <Image
-                src="/images/mortgage.jpg"
+                src="/images/house.jpg"
                 alt="Mortgage"
-                width={700}
-                height={700}
-                className="relative rounded-[40px] shadow-2xl object-cover"
+                width={500}
+                height={500}
+                className="relative rounded-[40px] h-120 w-120 shadow-2xl object-cover"
               />
 
             </div>
@@ -270,7 +270,7 @@ export default function MortgagesPage() {
             <div>
 
               <Image
-                src="/images/about.jpg"
+                src="/images/financepg.jpg"
                 alt="Mortgage Advisor"
                 width={700}
                 height={700}
@@ -376,7 +376,7 @@ export default function MortgagesPage() {
 
               <ul className="mt-6 space-y-4 text-gray-600 leading-7">
 
-                <li>✔ Age between 25 – 65 years</li>
+                <li>✔ Age between 21 – 65 years</li>
 
                 <li>✔ Valid Emirates ID</li>
 
@@ -448,9 +448,9 @@ export default function MortgagesPage() {
                         {[
                             "Passport Copy",
                             "Emirates ID (Residents)",
-                            "Salary Certificate / Trade license",
+                            "Salary Certificate",
                             "Bank statement (last 6 months)",
-                            "Property reservation / Sales agreement"
+                            "Property reservation"
 
                         ].map((item, index) => (
 
@@ -819,7 +819,7 @@ export default function MortgagesPage() {
 
       {/* MORTGAGE HIGHLIGHTS */}
 
-      <section className="bg-white py-20">
+      <section className="bg-white py-10">
 
         <div className="mx-auto max-w-6xl px-6 lg:ml-32">
 
@@ -898,7 +898,7 @@ export default function MortgagesPage() {
         w-full
         max-w-[350px]
         md:max-w-5xl
-        lg:ml-25
+        lg:ml-35
         rounded-[30px]
         lg:rounded-[40px]
         bg-[#0e847b]

@@ -346,6 +346,9 @@ export default function BlueprintHero() {
 
                         className="
                         text-3xl
+                        mt-10
+                md:mt-0
+                lg:mt-0
                         sm:text-4xl
                         lg:text-5xl
                         font-semibold

@@ -34,6 +34,8 @@ export default function BusinessFinancePage(){
 
 return(
 <>
+
+<div className="overflow-x-hidden"></div>
 <Sidebar />
 
 
@@ -92,8 +94,10 @@ Business Finance
 
 <h1 className="
 mt-6
-text-4xl
-md:text-6xl
+text-3xl
+sm:text-4xl
+md:text-5xl
+lg:text-6xl
 font-bold
 leading-tight
 text-gray-900
@@ -114,8 +118,10 @@ Smart Financing
 <p className="
 mt-8
 max-w-xl
-text-lg
-leading-8
+text-base
+md:text-lg
+leading-7
+md:leading-8
 text-gray-600
 ">
 
@@ -182,22 +188,26 @@ blur-3xl
 "/>
 
 
-<Image
 
-src="/images/finance.jpg"
+<video
+  className="
+    relative
+    w-full
+    h-[280px]
+    sm:h-[360px]
+    md:h-[480px]
+    lg:h-[480px]
+    object-cover
+    rounded-[30px]
+    lg:rounded-[40px]
+  "
+>
+                    <source
+                        src="/videos/financevideo.mp4"
+                        type="video/mp4"
+                    />
 
-alt="Business Finance"
-
-width={700}
-
-height={700}
-
-className="
-relative
-rounded-[40px]
-shadow-2xl
-"
-/>
+                </video>
 
 
 </div>
@@ -247,9 +257,10 @@ Our Solutions
 
 <h2 className="
 mt-5
-text-4xl
-font-bold
-text-gray-900
+text-3xl
+sm:text-4xl
+md:text-5xl
+lg:text-6xl
 ">
 Business Finance Solutions
 </h2>
@@ -274,7 +285,8 @@ key={item.title}
 className="
 rounded-[30px]
 bg-[#f8fbfb]
-p-8
+p-6
+md:p-8
 shadow-lg
 transition
 hover:-translate-y-3
@@ -327,107 +339,179 @@ text-gray-600
 
 {/* WHY FAB */}
 
+<section className="relative overflow-hidden bg-white py-24">
 
-<section className="
-bg-[#f8fbfb]
-py-20
-">
+    {/* Background Glow */}
+    <div className="absolute -left-20 top-0 h-96 w-96 rounded-full bg-[#0e847b]/10 blur-[140px]" />
+    <div className="absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-yellow-300/10 blur-[140px]" />
 
-
-<div className="
-mx-auto
-max-w-6xl
-px-6
-lg:ml-32
-">
+    <div className="relative mx-auto max-w-7xl px-6 lg:ml-32">
+<div className="grid gap-12 lg:grid-cols-2 items-center">
 
 
-<div className="
-grid
-gap-12
-lg:grid-cols-2
-items-center
-">
+            {/* LEFT CONTENT */}
 
+            <div>
 
-<Image
+                <p className="uppercase tracking-[0.45em] text-[#0e847b] font-semibold">
+                    Why Businesses Choose FAB
+                </p>
 
-src="/images/about.jpg"
+                <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+                    More Than Funding.
+                    <span className="block text-[#0e847b]">
+                        A Financial Partner For Growth.
+                    </span>
+                </h2>
 
-alt="Business Advisor"
+                <p className="mt-8 max-w-xl text-lg leading-8 text-gray-600">
+                    Every business has different ambitions. Whether you're
+                    launching, expanding or strengthening cash flow, our
+                    specialists connect you with tailored financing solutions
+                    from trusted UAE banking partners—helping you move forward
+                    with confidence.
+                </p>
 
-width={600}
+                <div className="mt-10 grid gap-5 sm:grid-cols-2">
 
-height={600}
+                    <div className="rounded-3xl bg-[#f8fbfb] p-6 shadow-lg transition hover:-translate-y-2">
+                        <div className="text-4xl">🏦</div>
 
-className="
-rounded-[40px]
-shadow-xl
+                        <h3 className="mt-4 font-bold text-xl">
+                            Leading Bank Network
+                        </h3>
+
+                        <p className="mt-3 text-gray-600 leading-7">
+                            Access financing options from trusted UAE banking partners.
+                        </p>
+                    </div>
+
+                    <div className="rounded-3xl bg-[#f8fbfb] p-6 shadow-lg transition hover:-translate-y-2">
+                        <div className="text-4xl">⚡</div>
+
+                        <h3 className="mt-4 font-bold text-xl">
+                            Faster Decisions
+                        </h3>
+
+                        <p className="mt-3 text-gray-600 leading-7">
+                            Streamlined application support for quicker approvals.
+                        </p>
+                    </div>
+
+                    <div className="rounded-3xl bg-[#f8fbfb] p-6 shadow-lg transition hover:-translate-y-2">
+                        <div className="text-4xl">📊</div>
+
+                        <h3 className="mt-4 font-bold text-xl">
+                            Tailored Solutions
+                        </h3>
+
+                        <p className="mt-3 text-gray-600 leading-7">
+                            Financing structured around your business goals.
+                        </p>
+                    </div>
+
+                    <div className="rounded-3xl bg-[#f8fbfb] p-6 shadow-lg transition hover:-translate-y-2">
+                        <div className="text-4xl">🤝</div>
+
+                        <h3 className="mt-4 font-bold text-xl">
+                            Dedicated Experts
+                        </h3>
+
+                        <p className="mt-3 text-gray-600 leading-7">
+                            One-to-one guidance from consultation to funding.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            {/* RIGHT SIDE */}
+
+            <div className="relative">
+
+                <div className="absolute inset-0 rounded-[40px] bg-[#0e847b]/10 blur-3xl" />
+
+                <Image
+                    src="/images/finance.jpg"
+                    alt="Business Finance"
+                    width={700}
+                    height={700}
+                    className="
+relative
+rounded-[30px]
+lg:rounded-[40px]
+shadow-2xl
+w-full
+h-[300px]
+md:h-[420px]
+lg:h-[360px]
+object-cover
+lg:-top-40
 "
-/>
+                />
 
+                {/* Floating Card */}
 
+                <div className="
+absolute
+left-1/2
+bottom-4
+-translate-x-1/2
 
-<div>
+lg:left-auto
+lg:right-0
+lg:bottom-20
+lg:translate-x-0
 
+rounded-[28px]
+bg-[#0e847b]
+p-4
+text-white
+shadow-2xl
+w-[90%]
+max-w-sm
+lg:w-auto">
 
-<p className="
-uppercase
-tracking-[0.35em]
-text-[#0e847b]
-font-semibold
-">
-Why FAB
-</p>
+                    <div className="grid grid-cols-2 gap-8">
 
+                        <div>
+                            <h3 className="md:text-2xl text-lg font-bold">10+</h3>
+                            <p className="mt-2 text-white/80 text-sm">
+                                Banking Partners
+                            </p>
+                        </div>
 
-<h2 className="
-mt-5
-text-4xl
-font-bold
-">
-Finance Made Simple
-</h2>
+                        <div>
+                            <h3 className="md:text-2xl text-lg font-bold">100%</h3>
+                            <p className="mt-2 text-white/80 text-sm">
+                                Personalized Advice
+                            </p>
+                        </div>
 
+                        <div>
+                            <h3 className="md:text-2xl text-lg font-bold">Fast</h3>
+                            <p className="mt-2 text-white/80 text-sm">
+                                Application Support
+                            </p>
+                        </div>
 
-<p className="
-mt-6
-text-lg
-leading-8
-text-gray-600
-">
+                        <div>
+                            <h3 className="text-3xl font-bold">UAE</h3>
+                            <p className="mt-2 text-white/80 text-sm">
+                                Business Expertise
+                            </p>
+                        </div>
 
-Our finance specialists compare solutions from leading
-banks and help businesses secure suitable funding.
+                    </div>
 
-</p>
+                </div>
 
+            </div>
 
+        </div>
 
-<ul className="
-mt-8
-space-y-4
-text-gray-700
-">
-
-
-<li>✔ Competitive financing options</li>
-<li>✔ Fast application process</li>
-<li>✔ Expert financial guidance</li>
-<li>✔ Support throughout approval</li>
-
-
-</ul>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
+    </div>
 
 </section>
 
@@ -488,8 +572,9 @@ Your Business Finance Journey
 mt-12
 grid
 gap-6
-md:grid-cols-3
-">
+sm:grid-cols-2
+lg:grid-cols-3"
+>
 
 
 {[
@@ -505,7 +590,8 @@ key={x}
 className="
 rounded-3xl
 bg-[#f8fbfb]
-p-8
+p-6
+md:p-8
 shadow-lg
 text-center
 "
@@ -569,7 +655,7 @@ mx-auto
 max-w-5xl
 rounded-[40px]
 bg-[#0e847b]
-p-10
+p-8
 md:p-14
 text-center
 text-white
@@ -590,7 +676,8 @@ blur-3xl
 
 <h2 className="
 relative
-text-3xl
+text-2xl
+sm:text-3xl
 md:text-5xl
 font-bold
 ">
@@ -602,7 +689,8 @@ Ready To Grow Your Business?
 relative
 mt-5
 text-white/80
-text-lg
+text-base
+md:text-lg
 ">
 Speak with our finance specialists today.
 </p>
@@ -618,8 +706,10 @@ inline-flex
 mt-8
 rounded-full
 bg-white
-px-8
-py-4
+px-6
+md:px-8
+py-3
+md:py-4
 font-semibold
 text-[#0e847b]
 hover:scale-105
