@@ -16,9 +16,7 @@ export default function MortgageCalculator() {
     useState("Secondary Market");
 
 
-    const [propertyPrice, setPropertyPrice] =
-        useState(1000000);
-
+    const [propertyPrice, setPropertyPrice] = useState<number | "">(1000000);
 
     const [years, setYears] =
         useState(25);
@@ -33,53 +31,58 @@ export default function MortgageCalculator() {
 
 const downPaymentPercentage = (() => {
 
+    // ================= RESIDENT =================
+
     if (residentType === "Resident") {
 
-        if (mortgageType === "Primary Market") {
-            return 25;
-        }
-
+        // Secondary Market
         if (mortgageType === "Secondary Market") {
             return 25;
         }
 
-        if (mortgageType === "Cash Against New Property") {
+        // Developer Payment
+        if (mortgageType === "Developer Payment") {
+
+            if (residencyStatus === "First Mortgage") {
+                return 25;
+            }
+
+            return 75;
+        }
+
+        // Cash Against Property
+        if (mortgageType === "Cash Against Property") {
             return 40;
         }
 
         return 25;
-
-    } else {
-
-
-        if (mortgageType === "Primary Market") {
-            return 40;
-        }
-
-
-        if (mortgageType === "Secondary Market") {
-            return 40;
-        }
-
-
-        if (mortgageType === "Cash Against New Property") {
-            return 50;
-        }
-
-
-        return 40;
-
     }
 
 
+    // ================= NON RESIDENT =================
+
+    if (mortgageType === "Secondary Market") {
+        return 40;
+    }
+
+    if (mortgageType === "Developer Payment") {
+        return 40;
+    }
+
+    if (mortgageType === "Cash Against Property") {
+        return 50;
+    }
+
+    return 40;
+
 })();
+  const price = Number(propertyPrice || 0);
 
-    const downPayment =
-        propertyPrice * (downPaymentPercentage / 100);
+const downPayment =
+    price * (downPaymentPercentage / 100);
 
-
-    const loanAmount =
-        propertyPrice - downPayment;
+const loanAmount =
+    price - downPayment;
 
 
 
@@ -582,33 +585,30 @@ Cash Against Property
                             </label>
 
 
-                            <input
+<input
+    type="number"
+    value={propertyPrice}
+    onChange={(e) => {
 
-                                type="number"
+        const value = e.target.value;
 
-                                value={propertyPrice}
+        if (value === "") {
+            setPropertyPrice("");
+        } else {
+            setPropertyPrice(Number(value));
+        }
 
-                                onChange={(e) =>
-                                    setPropertyPrice(
-                                        Number(e.target.value)
-                                    )
-                                }
-
-
-                                className="
-                                mt-3
-                                w-full
-                                rounded-2xl
-                                border
-                                border-gray-200
-                                p-3
-md:p-4
-                                "
-
-                            />
-
-
-
+    }}
+    className="
+        mt-3
+        w-full
+        rounded-2xl
+        border
+        border-gray-200
+        p-3
+        md:p-4
+    "
+/>
 
 
 
@@ -838,7 +838,7 @@ justify-between
 
 
                                         <strong>
-                                            AED {propertyPrice.toLocaleString()}
+                                            AED {price.toLocaleString()}
                                         </strong>
 
                                     </div>
