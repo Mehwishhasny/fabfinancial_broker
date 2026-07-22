@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FAB Financial Broker",
-  description: "Trusted Financial Broker in UAE",
+  title: "FAB Financial Broker | Mortgage Broker in UAE",
+  description: "Expert mortgage solutions in the UAE. Compare home loans, property financing and solutions with FAB Financial Broker.",
 };
 
 export default function RootLayout({
