@@ -37,7 +37,12 @@ const downPaymentPercentage = (() => {
 
         // Secondary Market
         if (mortgageType === "Secondary Market") {
-            return 25;
+            
+            if (residencyStatus === "First Mortgage") {
+                return 25;
+            }
+
+            return 40;
         }
 
         // Developer Payment

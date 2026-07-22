@@ -270,7 +270,7 @@ lg:col-span-1
                                     href="mailto:fabfinancialbroker@gmail.com"
                                     className="hover:text-[#0e847b]"
                                 >
-                                    fabfinancialbroker@gmail.com
+                                    partner@fabfinancialbroker.ae
                                 </a>
 
                             </div>
@@ -383,33 +383,6 @@ lg:col-span-1
                             © {new Date().getFullYear()} FAB Financial Broker.
                             All rights reserved.
                         </p>
-
-
-
-                        <div
-                            className="
-                                flex
-                                flex-wrap
-                                justify-center
-                                gap-5
-                                text-sm
-                                text-gray-500
-                            "
-                        >
-
-                            <a className="hover:text-[#0e847b]">
-                                Privacy Policy
-                            </a>
-
-                            <a className="hover:text-[#0e847b]">
-                                Terms & Conditions
-                            </a>
-
-                            <a className="hover:text-[#0e847b]">
-                                Cookies
-                            </a>
-
-                        </div>
 
 
                     </div>

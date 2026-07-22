@@ -184,7 +184,7 @@ export default function ContactPage() {
                 title: "Email",
                 value: "fabfinancialbroker@gmail.com",
                 desc: "Response within 24 hours",
-                href: "mailto:fabfinancialbroker@gmail.com",
+                href: "mailto:partner@fabfinancialbroker.ae",
               },
           
             ].map((item, index) => (
@@ -449,7 +449,7 @@ export default function ContactPage() {
                         hover:bg-[#0b6d65]
                       "
                     >
-                      <a href="mailto:fabfinancialbroker@gmail.com">
+                      <a href="mailto:partner@fabfinancialbroker.ae">
                         Send Message
                       </a>
 
